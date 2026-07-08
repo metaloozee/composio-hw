@@ -1,0 +1,255 @@
+[
+  {
+    "id": 41,
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "website": "shopify.dev",
+    "docs_url": "https://shopify.dev/docs/api",
+    "what_it_does": "Explore Shopify&#x27;s APIs, references, and developer tools. Find the right resources for building apps, storefronts, themes, and integrations.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://shopify.dev/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 42,
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "website": "woocommerce.com",
+    "docs_url": "https://woocommerce.com/document/woocommerce-rest-api",
+    "what_it_does": "WooCommerce REST API Documentation - WooCommerce",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://woocommerce.com/document/woocommerce-rest-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 43,
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "website": "developer.bigcommerce.com",
+    "docs_url": "https://developer.bigcommerce.com/docs/rest",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://developer.bigcommerce.com/docs/rest",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "website": "developer.salesforce.com/docs/commerce",
+    "docs_url": "https://developer.salesforce.com/docs/commerce",
+    "what_it_does": "Develop personalized ecommerce experiences with our fast, flexible solutions.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.salesforce.com/docs/commerce",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "website": "developer.adobe.com/commerce",
+    "docs_url": "https://developer.adobe.com/commerce/webapi/rest",
+    "what_it_does": "Overview of the Adobe Commerce and Magento Open Source REST API documentation.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developer.adobe.com/commerce/webapi/rest",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "website": "developers.squarespace.com",
+    "docs_url": "https://developers.squarespace.com",
+    "what_it_does": "Squarespace offers a suite of different tools for developers. Find the offering that's right for you, or get started with a Developer Platform website.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.squarespace.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 47,
+    "name": "Ecwid",
+    "category": "Ecommerce",
+    "website": "api-docs.ecwid.com",
+    "docs_url": "https://api-docs.ecwid.com/reference",
+    "what_it_does": "Build with Ecwid apps | Ecwid Documentation",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://api-docs.ecwid.com/reference",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 48,
+    "name": "Gumroad",
+    "category": "Ecommerce",
+    "website": "gumroad.com/api",
+    "docs_url": "https://app.gumroad.com/api",
+    "what_it_does": "API",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://app.gumroad.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "website": "developer-docs.amazon.com/sp-api",
+    "docs_url": "https://developer-docs.amazon.com/sp-api/docs",
+    "what_it_does": "Information about how to use the SP-API documentation site, and quick links for SP-API content.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer-docs.amazon.com/sp-api/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 50,
+    "name": "fanbasis",
+    "category": "Ecommerce",
+    "website": "fanbasis.com",
+    "docs_url": "https://fanbasis.com",
+    "what_it_does": "FanBasis is the all-in-one marketplace OS for digital products, combining payments, hosting, fulfillment, upsells, and analytics in one seamless platform.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Gated",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://fanbasis.com",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

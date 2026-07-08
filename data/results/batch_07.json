@@ -1,0 +1,256 @@
+[
+  {
+    "id": 61,
+    "name": "GitHub",
+    "category": "Developer & Infra",
+    "website": "docs.github.com/rest",
+    "docs_url": "https://docs.github.com/en/rest",
+    "what_it_does": "Create integrations, retrieve data, and automate your workflows with the GitHub REST API.",
+    "auth_methods": [
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.github.com/en/rest",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 62,
+    "name": "Vercel",
+    "category": "Developer & Infra",
+    "website": "vercel.com/docs/rest-api",
+    "docs_url": "https://vercel.com/docs/rest-api",
+    "what_it_does": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://vercel.com/docs/rest-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 63,
+    "name": "Netlify",
+    "category": "Developer & Infra",
+    "website": "docs.netlify.com/api",
+    "docs_url": "https://docs.netlify.com/api",
+    "what_it_does": "Use our REST API to interact with our platform. Learn the basics for using the API, instructions for deploying sites, and notes on commonly used endpoints.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.netlify.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 64,
+    "name": "Cloudflare",
+    "category": "Developer & Infra",
+    "website": "developers.cloudflare.com/api",
+    "docs_url": "https://developers.cloudflare.com/api",
+    "what_it_does": "API Reference | Cloudflare API",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developers.cloudflare.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 65,
+    "name": "Supabase",
+    "category": "Developer & Infra",
+    "website": "supabase.com/docs",
+    "docs_url": "https://supabase.com/docs/guides/api",
+    "what_it_does": "Auto-generating data REST API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://supabase.com/docs/guides/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 66,
+    "name": "Neo4j",
+    "category": "Developer & Infra",
+    "website": "neo4j.com/docs/api",
+    "docs_url": "https://neo4j.com/docs/http-api",
+    "what_it_does": "The Neo4j HTTP API allows to execute a series of Cypher statements against a Neo4j server through HTTP requests.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://neo4j.com/docs/http-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 67,
+    "name": "Snowflake",
+    "category": "Developer & Infra",
+    "website": "docs.snowflake.com",
+    "docs_url": "https://docs.snowflake.com/en/developer-guide",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://docs.snowflake.com/en/developer-guide",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "category": "Developer & Infra",
+    "website": "mongodb.com/docs/atlas/api",
+    "docs_url": "https://www.mongodb.com/docs/atlas/api",
+    "what_it_does": "Use APIs and the Atlas CLI to programmatically access your deployments and apps.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "GraphQL"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.mongodb.com/docs/atlas/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 69,
+    "name": "Datadog",
+    "category": "Developer & Infra",
+    "website": "docs.datadoghq.com/api",
+    "docs_url": "https://docs.datadoghq.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://docs.datadoghq.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 70,
+    "name": "Sentry",
+    "category": "Developer & Infra",
+    "website": "docs.sentry.io/api",
+    "docs_url": "https://docs.sentry.io/api",
+    "what_it_does": "API Reference",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.sentry.io/api",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

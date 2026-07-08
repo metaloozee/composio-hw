@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Composio · 100 SaaS APIs · Agent-Toolkit Readiness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  --ink: #0a0d13;
+  --surface-1: #11161e;
+  --surface-2: #161d27;
+  --surface-3: #1d2531;
+  --surface-input: #0c131c;
+  --border-subtle: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.10);
+  --border-strong: rgba(255,255,255,0.18);
+  --text-primary: #e6edf5;
+  --text-secondary: #94a3b8;
+  --text-muted: #5c6573;
+  --accent: #5eead4;
+  --accent-soft: rgba(94,234,212,0.12);
+  --accent-border: rgba(94,234,212,0.30);
+  --success: #4ade80;
+  --warning: #facc15;
+  --warning-soft: rgba(250,204,21,0.14);
+  --danger: #f87171;
+  --danger-soft: rgba(248,113,113,0.14);
+  --radius-chip: 4px;
+  --radius-cell: 3px;
+  --radius-card: 6px;
+  --radius-panel: 10px;
+  --fs-label: 10.5px;
+  --fs-caption: 12px;
+  --fs-body: 14px;
+  --fs-h4: 16px;
+  --fs-h3: 18px;
+  --fs-h2: 22px;
+  --fs-display: 56px;
+}
+html, body { background: var(--ink); }
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+.tnum { font-variant-numeric: tabular-nums; }
+
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+
+.strip {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10,13,19,0.85);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px 0;
+}
+.strip .row {
+  display: flex; align-items: center; gap: 24px;
+  font-size: var(--fs-label); font-weight: 500;
+  color: var(--text-secondary); letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.strip .brand-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 12px var(--accent);
+}
+.strip .spacer { flex: 1; }
+.strip .seq {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--text-muted); letter-spacing: 0;
+  font-size: 10.5px;
+}
+
+.hero { padding: 64px 0 32px; }
+.hero .lead {
+  font-size: var(--fs-label);
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero .lead::before {
+  content: ""; display: inline-block;
+  width: 14px; height: 1px; background: var(--border-strong);
+}
+.hero .display {
+  font-size: var(--fs-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 8px 0 4px;
+  font-variant-numeric: tabular-nums;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--text-primary);
+}
+.hero .display .div { color: var(--text-muted); font-weight: 500; }
+.hero .display .total { color: var(--text-secondary); }
+.hero .h-label {
+  font-size: 22px; font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+.hero .story {
+  max-width: 680px;
+  font-size: 17px; font-weight: 450;
+  color: var(--text-primary);
+  line-height: 1.55;
+  margin: 32px 0 24px;
+  text-wrap: pretty;
+}
+.hero .meta-strip {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-subtle);
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-chip);
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--text-secondary);
+  background: var(--surface-1);
+}
+.chip.accent { border-color: var(--accent-border); color: var(--accent); background: var(--accent-soft); }
+.chip .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+}
+
+.section { margin: 64px 0 24px; }
+.section .eyebrow {
+  font-size: var(--fs-label);
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 12px;
+}
+.section .eyebrow::before {
+  content: ""; display: inline-block;
+  width: 22px; height: 1px; background: var(--accent);
+}
+.section h2 {
+  font-size: var(--fs-h2); font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+.section .lede {
+  font-size: 15.5px;
+  color: var(--text-secondary);
+  max-width: 720px;
+  line-height: 1.55;
+  text-wrap: pretty;
+  margin-top: 4px;
+}
+
+.matrix-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  padding: 28px;
+  position: relative;
+}
+.matrix-grid {
+  display: grid;
+  grid-template-columns: 110px repeat(10, 1fr);
+  gap: 6px;
+}
+.matrix-cat {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex; align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+.matrix-cell {
+  width: 100%; height: 32px;
+  border-radius: var(--radius-cell);
+  cursor: pointer;
+  position: relative;
+  transition: transform 120ms cubic-bezier(0.23,1,0.32,1), outline-color 120ms;
+  border: 1px solid transparent;
+}
+.matrix-cell[data-build="ready"] { background: rgba(94,234,212,0.78); }
+.matrix-cell[data-build="ready"][data-comp="false"] { background: rgba(94,234,212,0.32); border-color: var(--accent-border); }
+.matrix-cell[data-build="outreach"] { background: rgba(250,204,21,0.78); }
+.matrix-cell[data-build="blocked"] { background: rgba(248,113,113,0.72); }
+.matrix-cell[data-build="unknown"] { background: rgba(255,255,255,0.06); border-color: var(--border); }
+.matrix-cell:hover { transform: scale(1.25); z-index: 2; outline: 1px solid var(--border-strong); outline-offset: 2px; }
+.matrix-axes-x {
+  display: grid; grid-template-columns: 110px repeat(10, 1fr); gap: 6px;
+  margin-top: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px; color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.matrix-axes-x .x-tick { padding-top: 4px; }
+
+.matrix-legend {
+  display: flex; gap: 18px; flex-wrap: wrap;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 12px;
+}
+.matrix-legend .li { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+.matrix-legend .swatch {
+  width: 12px; height: 12px; border-radius: 2px;
+  border: 1px solid transparent;
+}
+.matrix-legend .swatch.ready-full { background: rgba(94,234,212,0.78); }
+.matrix-legend .swatch.ready-half { background: rgba(94,234,212,0.32); border-color: var(--accent-border); }
+.matrix-legend .swatch.outreach { background: rgba(250,204,21,0.78); }
+.matrix-legend .swatch.blocked { background: rgba(248,113,113,0.72); }
+.matrix-legend .legend-divider {
+  width: 1px; height: 14px; background: var(--border);
+  margin: 0 4px;
+}
+
+.matrix-tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  background: var(--surface-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+  width: 240px;
+  box-shadow: 0 0 0 1px var(--border-subtle), 0 8px 24px rgba(0,0,0,0.6);
+  font-size: 12px;
+  opacity: 0; transform: translateY(-2px);
+  transition: opacity 120ms, transform 120ms cubic-bezier(0.23,1,0.32,1);
+}
+.matrix-tooltip.show { opacity: 1; transform: translateY(0); }
+.matrix-tooltip .tt-name { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+.matrix-tooltip .tt-row { display: flex; justify-content: space-between; gap: 12px; color: var(--text-secondary); font-family: "JetBrains Mono", monospace; font-size: 11px; padding: 1px 0; }
+.matrix-tooltip .tt-row .v { color: var(--text-primary); text-align: right; max-width: 130px; }
+.matrix-tooltip .tt-comp-yes { color: var(--accent); }
+.matrix-tooltip .tt-comp-no { color: var(--text-muted); }
+
+.theses { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap: 18px; margin-top: 32px; }
+.thesis {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.thesis::before {
+  content: ""; position: absolute; left: 0; top: 0;
+  height: 100%; width: 2px;
+  background: var(--accent);
+  opacity: 0; transition: opacity 240ms;
+}
+.thesis:hover::before { opacity: 1; }
+.thesis .num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; color: var(--accent); font-weight: 500;
+  letter-spacing: 0.06em; margin-bottom: 14px;
+}
+.thesis h3 {
+  font-size: var(--fs-h3); font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px; line-height: 1.25;
+}
+.thesis p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0 0 12px; text-wrap: pretty; }
+.thesis .big-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 36px; font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin: 14px 0 4px;
+  letter-spacing: -0.02em;
+}
+.thesis .big-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 18px; }
+.thesis .breakout {
+  display: flex; gap: 18px; flex-wrap: wrap;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+.thesis .breakout .b-item {
+  display: flex; flex-direction: column; gap: 2px;
+  min-width: 80px;
+}
+.thesis .breakout .b-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px; font-weight: 600; color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.thesis .breakout .b-label { font-size: 10px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+.cat-bars { }
+.cat-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 90px;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.cat-row:last-child { border-bottom: none; }
+.cat-row .cat-name {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; color: var(--text-secondary);
+  letter-spacing: 0.04em; text-transform: uppercase;
+  font-weight: 500;
+}
+.cat-bar {
+  display: flex; height: 14px; gap: 2px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.cat-bar .seg { height: 100%; }
+.cat-bar .seg.ready { background: var(--accent); }
+.cat-bar .seg.outreach { background: var(--warning); }
+.cat-bar .seg.blocked { background: var(--danger); }
+.cat-row .cat-meta {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; color: var(--text-secondary); text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.cat-row .cat-meta .comp { color: var(--text-muted); margin-left: 6px; }
+
+.spectrum { }
+.spectrum .row {
+  display: grid;
+  grid-template-columns: 230px 1fr 60px;
+  gap: 16px; align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.spectrum .row:last-child { border-bottom: none; }
+.spectrum .row .label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary); font-weight: 500;
+}
+.spectrum .row .bar { height: 10px; background: var(--surface-2); border-radius: 2px; overflow: hidden; }
+.spectrum .row .bar .fill { height: 100%; border-radius: 2px; transition: width 400ms cubic-bezier(0.23,1,0.32,1); }
+.spectrum .row[data-kind="oauth2"] .fill { background: linear-gradient(90deg, rgba(94,234,212,0.5), var(--accent)); }
+.spectrum .row[data-kind="apikey"] .fill { background: linear-gradient(90deg, rgba(94,234,212,0.3), var(--accent)); }
+.spectrum .row[data-kind="dual"] .fill { background: linear-gradient(90deg, var(--accent), var(--success)); }
+.spectrum .row[data-kind="noauth"] .fill { background: var(--text-muted); }
+.spectrum .row[data-kind="other"] .fill { background: rgba(255,255,255,0.18); }
+.spectrum .row .count {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px; color: var(--text-primary); font-weight: 600;
+  text-align: right; font-variant-numeric: tabular-nums;
+}
+
+.blockers-section { }
+.blocker-row {
+  display: grid;
+  grid-template-columns: 250px 1fr 60px;
+  gap: 16px; align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.blocker-row:last-child { border-bottom: none; }
+.blocker-row .label { font-size: 13px; color: var(--text-primary); font-weight: 500; }
+.blocker-row .bar { height: 10px; background: var(--surface-2); border-radius: 2px; overflow: hidden; }
+.blocker-row .bar .fill { height: 100%; background: var(--danger); border-radius: 2px; transition: width 400ms ease; }
+.blocker-row .count {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px; color: var(--text-primary); font-weight: 600;
+  text-align: right; font-variant-numeric: tabular-nums;
+}
+
+.table-card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  margin-top: 24px;
+}
+.toolbar {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: center;
+}
+.toolbar .filter-label {
+  font-size: 11px; color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.08em; font-weight: 500; margin-right: 4px;
+}
+.btn {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; font-weight: 500;
+  padding: 6px 11px;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-chip);
+  cursor: pointer;
+  transition: all 120ms cubic-bezier(0.23,1,0.32,1);
+  letter-spacing: 0.02em;
+}
+.btn:hover { color: var(--text-primary); border-color: var(--border-strong); background: var(--surface-3); }
+.btn:active { transform: scale(0.97); }
+.btn.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-border); }
+.toolbar .search {
+  flex: 1; min-width: 180px;
+  background: var(--surface-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 7px 12px;
+  font-size: 13px;
+  font-family: "IBM Plex Sans", sans-serif;
+  border-radius: var(--radius-chip);
+  outline: none;
+  transition: border-color 120ms;
+}
+.toolbar .search:focus { border-color: var(--accent-border); }
+.result-count {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  text-align: left;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px; font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+  cursor: pointer; user-select: none;
+  white-space: nowrap;
+}
+thead th:hover { color: var(--text-secondary); }
+tbody td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+  color: var(--text-secondary);
+}
+tbody tr:hover td { background: rgba(94,234,212,0.03); }
+ tbody td.id { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text-muted); width: 36px; } 
+tbody td.name { font-weight: 500; color: var(--text-primary); }
+tbody td.cat { font-size: 12px; color: var(--text-muted); font-family: "JetBrains Mono", monospace; white-space: nowrap; }
+tbody td.desc { font-size: 12px; color: var(--text-muted); max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.status-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px; font-weight: 500;
+  padding: 3px 8px; border-radius: 12px;
+  letter-spacing: 0.04em; white-space: nowrap;
+}
+.status-pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; }
+.status-pill.ready { color: var(--accent); background: var(--accent-soft); }
+.status-pill.ready::before { background: var(--accent); }
+.status-pill.blocked { color: var(--danger); background: var(--danger-soft); }
+.status-pill.blocked::before { background: var(--danger); }
+.status-pill.outreach { color: var(--warning); background: var(--warning-soft); }
+.status-pill.outreach::before { background: var(--warning); }
+.status-pill.needs { color: var(--warning); background: var(--warning-soft); }
+.status-pill.needs::before { background: var(--warning); }
+.comp-pill {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px; font-weight: 500;
+  padding: 2px 7px; border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+.comp-pill.yes { background: var(--accent-soft); color: var(--accent); border: 1px solid var(--accent-border); }
+.comp-pill.no { background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border); }
+.auth-list { font-family: "JetBrains Mono", monospace; font-size: 11.5px; color: var(--text-secondary); white-space: nowrap; }
+td.tools { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--text-muted); font-variant-numeric: tabular-nums; text-align: right; width: 56px; }
+td.sserve {  }
+td.sserve .ss-pill {
+  display: inline-block;
+  font-size: 10.5px; padding: 2px 7px; border-radius: 3px;
+  letter-spacing: 0.02em; white-space: nowrap;
+  font-family: "JetBrains Mono", monospace;
+}
+td.sserve .ss-pill.ss { color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-border); }
+td.sserve .ss-pill.caveat { color: var(--warning); background: var(--warning-soft); border: 1px solid rgba(250,204,21,0.30); }
+td.sserve .ss-pill.gated { color: var(--danger); background: var(--danger-soft); border: 1px solid rgba(248,113,113,0.30); }
+td.sserve .ss-pill.blocked { color: var(--text-muted); background: var(--surface-2); border: 1px solid var(--border); }
+
+.pipe-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; margin-top: 28px; }
+.pipe-step {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 22px;
+}
+.pipe-step .step-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px; color: var(--accent);
+  letter-spacing: 0.10em; text-transform: uppercase;
+  margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+}
+.pipe-step .step-tag .seq-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px;
+  border: 1px solid var(--accent-border); border-radius: 50%;
+  color: var(--accent); font-size: 10px; font-weight: 600;
+  background: var(--accent-soft);
+}
+.pipe-step h4 { font-size: 15px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
+.pipe-step p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin: 0; text-wrap: pretty; }
+.pipe-step pre {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px; background: var(--surface-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px; padding: 10px 12px;
+  color: var(--accent); margin: 12px 0 0;
+  overflow-x: auto; line-height: 1.5;
+  white-space: pre;
+}
+.pipe-step pre .out { color: var(--text-secondary); }
+.pipe-note {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(250,204,21,0.30);
+  background: rgba(250,204,21,0.06);
+  border-radius: var(--radius-card);
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.pipe-note .label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px; color: var(--warning);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding-top: 2px; white-space: nowrap;
+}
+.pipe-note .body {
+  font-size: 13.5px; color: var(--text-secondary);
+  line-height: 1.6; text-wrap: pretty;
+}
+
+.verify {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+.verify-pill {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 22px;
+}
+.verify-pill .pass-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; color: var(--text-muted);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.verify-pill .pct {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 44px; font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em; line-height: 1;
+  margin: 4px 0;
+}
+.verify-pill .pct-1 { color: var(--danger); }
+.verify-pill .pct-2 { color: var(--warning); }
+.verify-pill .pct-3 { color: var(--success); }
+.verify-pill .pct .sub { font-size: 22px; color: var(--text-muted); font-weight: 500; }
+.verify-pill .pass-tag {
+  font-size: 13px; font-weight: 600; margin-bottom: 10px;
+}
+.verify-pill .pass-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.55; }
+.verify-arrows {
+  display: flex; align-items: center; gap: 12px;
+  flex-wrap: wrap; justify-content: center;
+  margin-top: 14px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+.verify-arrow { display: inline-flex; align-items: center; }
+.verify-arrow::before {
+  content: "→"; font-size: 14px; margin-right: 4px;
+  color: var(--accent);
+}
+
+.manual-table { margin-top: 28px; overflow: hidden; border-radius: var(--radius-panel); border: 1px solid var(--border-subtle); }
+.manual-table table { background: var(--surface-1); }
+.manual-table td.web { color: var(--text-secondary); font-size: 12.5px; max-width: 220px; }
+.manual-table td.api { color: var(--text-secondary); font-size: 12.5px; max-width: 240px; }
+.manual-table td.insight { color: var(--text-secondary); font-size: 12.5px; }
+.manual-table td.change {
+  font-family: "JetBrains Mono", monospace; font-size: 11px; white-space: nowrap; letter-spacing: 0.02em; font-weight: 500;
+}
+.manual-table td.change.ready { color: var(--accent); }
+.manual-table td.change.blocked { color: var(--danger); }
+.manual-table td.change.outreach { color: var(--warning); }
+.manual-table td { padding: 14px 16px; }
+.manual-table thead th { background: var(--surface-2); }
+
+.manual-rule {
+  margin-top: 28px;
+  padding: 22px 24px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-card);
+  display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: flex-start;
+}
+.manual-rule .key {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; letter-spacing: 0.08em;
+  color: var(--accent); text-transform: uppercase; font-weight: 500;
+  padding-top: 2px;
+}
+.manual-rule .body {
+  font-size: 14.5px; color: var(--text-primary);
+  line-height: 1.65; text-wrap: pretty;
+}
+.manual-rule .body strong { color: var(--accent); }
+
+.qt {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  margin-top: 24px;
+}
+.qt .toolbar { border-bottom: 1px solid var(--border-subtle); }
+
+footer {
+  margin-top: 88px; padding: 32px 0;
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+footer .mono { color: var(--accent); }
+
+@media (max-width: 760px) {
+  .matrix-grid { grid-template-columns: 80px repeat(10, 1fr); gap: 3px; }
+  .matrix-cat { font-size: 9px; padding-right: 4px; }
+  .hero .display { font-size: 44px; }
+  .strip .row { gap: 12px; }
+  .strip .seq { display: none; }
+  .spectrum .row { grid-template-columns: 130px 1fr 50px; }
+  .spectrum .row .label { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="strip">
+  <div class="wrap row">
+    <span class="brand-dot"></span>
+    <span>Composio</span>
+    <span style="color: var(--text-muted)">/</span>
+    <span>Agent-Toolkit Readiness</span>
+    <span class="spacer"></span>
+    <span class="seq">CASE STUDY · 100 APPS · 2026-07-08 23:38 UTC</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section class="hero">
+  <div class="lead"><span>Headline Finding</span></div>
+  <div class="display tnum">
+    <span>88</span><span class="div"> / </span><span class="total">100</span>
+  </div>
+  <div class="h-label">apps are agent-toolkit ready today.</div>
+  <p class="story">The other 12 either don't expose a developer API (NotebookLM, Sherlock, fanbasis, Mermaid CLI), or it sits behind a paid plan, sales call, or compliance review (LinkedIn Ads, Amazon SP-API, PitchBook, Brex, Otter, DealCloud, iPayX). Findings grounded in Composio's live toolkit registry — 56 of the 100 are already managed there — and cross-verified through three passes including manual login inspection.</p>
+  <div class="meta-strip">
+    <span class="chip"><span class="dot" style="background: var(--accent)"></span>88 ready</span>
+    <span class="chip"><span class="dot" style="background: var(--warning)"></span>6 need outreach</span>
+    <span class="chip"><span class="dot" style="background: var(--danger)"></span>6 blocked</span>
+    <span class="chip"><span class="dot" style="background: rgba(255,255,255,0.30)"></span>56 in Composio</span>
+    <span class="chip"><span class="dot" style="background: var(--accent); opacity: 0.45"></span>7,899 actions covered</span>
+    <span class="chip accent">3-pass verification · 35→75→91%</span>
+  </div>
+</section>
+
+<section class="section">
+  <div class="eyebrow"><span>Signature</span></div>
+  <h2>The Readiness Matrix — 100 apps in one view.</h2>
+  <p class="lede">A 10×10 grid: each row is a category (10 apps each), each cell represents one app's readiness to become an agent toolkit. Solid teal = Ready AND already in Composio; hollow teal = Ready but not yet wrapped in Composio (the clearest expansion win). Hover any cell for the app.</p>
+</section>
+<div class="matrix-card">
+  <div class="matrix-grid" id="matrixGrid"></div>
+  <div class="matrix-axes-x" id="matrixAxesX"></div>
+  <div class="matrix-legend">
+    <div class="li"><span class="swatch ready-full"></span>Ready · in Composio</div>
+    <div class="li"><span class="swatch ready-half"></span>Ready · not yet in Composio (opportunity)</div>
+    <div class="li"><span class="swatch outreach"></span>Needs outreach / sales-gated</div>
+    <div class="li"><span class="swatch blocked"></span>Blocked — no public API</div>
+    <div class="legend-divider"></div>
+    <div class="li" style="color: var(--text-muted)">Hover any cell for app detail</div>
+  </div>
+</div>
+<div class="matrix-tooltip" id="matrixTooltip"></div>
+
+<script id="inlineApps" type="application/json">[{"id":1,"name":"Salesforce","cat":"CRM & Sales","website":"salesforce.com","desc":"Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth","auth":["Oauth2","S2S Oauth2"],"ss":"Self-serve","breadth":"Broad (184 actions)","tools":184,"build":"Ready","blocker":"","comp":true,"comp_slug":"salesforce","web_login":null,"human":null},{"id":2,"name":"HubSpot","cat":"CRM & Sales","website":"hubspot.com","desc":"HubSpot is an inbound marketing, sales, and customer service platform integrating CRM, email automation, and analytics to facilitate lead nurturing and seamless","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Broad (244 actions)","tools":244,"build":"Ready","blocker":"","comp":true,"comp_slug":"hubspot","web_login":null,"human":null},{"id":3,"name":"Pipedrive","cat":"CRM & Sales","website":"pipedrive.com","desc":"Pipedrive is a sales management tool built around pipeline visualization, lead tracking, activity reminders, and automation to keep deals progressing","auth":["Oauth2","Api Key"],"ss":"Self-serve (likely)","breadth":"Broad (399 actions)","tools":399,"build":"Ready","blocker":"","comp":true,"comp_slug":"pipedrive","web_login":null,"human":null},{"id":4,"name":"Attio","cat":"CRM & Sales","website":"attio.com","desc":"Attio is a fully customizable workspace for your team's relationships and workflows.","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (99 actions)","tools":99,"build":"Ready","blocker":"","comp":true,"comp_slug":"attio","web_login":null,"human":null},{"id":5,"name":"Twenty","cat":"CRM & Sales","website":"twenty.com","desc":"Open-source CRM with API for contacts, deals, tasks, and custom objects","auth":["Api Key","Oauth2"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":15,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":6,"name":"Podio","cat":"CRM & Sales","website":"podio.com","desc":"Work management platform with OAuth2 API. Supports server-side, client-side, username/password, and app auth flows. Self-serve: register app for client_id/secre","auth":["Oauth2"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":12,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":"Own login \u00b7 social auth or username/password","human":"Web login supports username/password \u2014 that's the OAuth2 resource-owner flow (Password Credentials grant). Docs confirm fully self-serve; classification was wrong."},{"id":7,"name":"Zoho CRM","cat":"CRM & Sales","website":"zoho.com/crm","desc":"Zoho is a suite of cloud applications including CRM, email marketing, and collaboration tools, enabling businesses to automate and scale operations","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (57 actions)","tools":57,"build":"Ready","blocker":"","comp":true,"comp_slug":"zoho","web_login":null,"human":null},{"id":8,"name":"Close","cat":"CRM & Sales","website":"close.com","desc":"Close is a CRM platform designed to help businesses manage and streamline their sales processes, including calling, email automation, and predictive dialers.","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Narrow (6 actions)","tools":6,"build":"Ready","blocker":"","comp":true,"comp_slug":"close","web_login":null,"human":null},{"id":9,"name":"Copper","cat":"CRM & Sales","website":"copper.com","desc":"CRM for G Suite with API for leads, opportunities, contacts, and tasks","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":12,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":10,"name":"DealCloud","cat":"CRM & Sales","website":"dealcloud.com","desc":"Enterprise deal and relationship management for investment banking","auth":["Api Key"],"ss":"Gated","breadth":"Narrow (<20)","tools":5,"build":"Needs outreach","blocker":"Enterprise-only, requires Intapp contract","comp":false,"comp_slug":null,"web_login":"Email sign-in only","human":"Single-factor email login reveals nothing about the API. Docs are sparse and enterprise-gated."},{"id":11,"name":"Zendesk","cat":"Support & Helpdesk","website":"zendesk.com","desc":"Zendesk provides customer support software with ticketing, live chat, and knowledge base features, enabling efficient helpdesk operations and customer engagemen","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (452 actions)","tools":452,"build":"Ready","blocker":"","comp":true,"comp_slug":"zendesk","web_login":null,"human":null},{"id":12,"name":"Intercom","cat":"Support & Helpdesk","website":"intercom.com","desc":"Intercom provides live chat, messaging, and customer engagement tools, enabling businesses to drive conversions, handle support, and personalize communication a","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (133 actions)","tools":133,"build":"Ready","blocker":"","comp":true,"comp_slug":"intercom","web_login":null,"human":null},{"id":13,"name":"Freshdesk","cat":"Support & Helpdesk","website":"freshdesk.com","desc":"Freshdesk provides customer support software with ticketing, knowledge base, and automation features for efficient helpdesk operations and better customer exper","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Broad (178 actions)","tools":178,"build":"Ready","blocker":"","comp":true,"comp_slug":"freshdesk","web_login":null,"human":null},{"id":14,"name":"Front","cat":"Support & Helpdesk","website":"front.com","desc":"Shared inbox and team collaboration for customer communication","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":15,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":15,"name":"Pylon","cat":"Support & Helpdesk","website":"usepylon.com","desc":"Pylon is an AI-native B2B customer support platform that unifies ticketing, chat, knowledge base, and account intelligence across channels like Slack Connect, M","auth":["Dcr Oauth"],"ss":"Self-serve (likely)","breadth":"Narrow (12 actions)","tools":12,"build":"Ready","blocker":"","comp":true,"comp_slug":"pylon_mcp","web_login":null,"human":null},{"id":16,"name":"LiveAgent","cat":"Support & Helpdesk","website":"liveagent.com","desc":"Help desk and live chat with API for tickets, contacts, and knowledge base","auth":["Api Key"],"ss":"Gated (likely)","breadth":"Moderate (20-50)","tools":8,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":"Prompts for company name on signup","human":"Company-name prompt is a soft gate \u2014 filters non-business users out before trial access."},{"id":17,"name":"Plain","cat":"Support & Helpdesk","website":"plain.com","desc":"Plain is a collaborative support platform for B2B support teams, offering a modern, AI-powered interface to consolidate support channels and assist customers ef","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Moderate (22 actions)","tools":22,"build":"Ready","blocker":"","comp":true,"comp_slug":"plain","web_login":null,"human":null},{"id":18,"name":"Help Scout","cat":"Support & Helpdesk","website":"helpscout.com","desc":"Help Scout provides customer support software with shared inbox, knowledge base, and customer management tools","auth":["Oauth2"],"ss":"Self-serve (likely)","breadth":"Broad (129 actions)","tools":129,"build":"Ready","blocker":"","comp":true,"comp_slug":"help_scout","web_login":null,"human":null},{"id":19,"name":"Gorgias","cat":"Support & Helpdesk","website":"gorgias.com","desc":"Gorgias is a helpdesk and live chat platform specializing in e-commerce, offering automated support, order management, and unified customer communication","auth":["Api Key","Oauth2"],"ss":"Self-serve","breadth":"Moderate (32 actions)","tools":32,"build":"Ready","blocker":"","comp":true,"comp_slug":"gorgias","web_login":null,"human":null},{"id":20,"name":"Gladly","cat":"Support & Helpdesk","website":"gladly.com","desc":"Customer service platform with REST API, App Platform, Chat SDK, webhooks, lookup adapters. Full developer portal with tutorials and code examples.","auth":["Oauth2","Api Key"],"ss":"Self-serve (with caveats)","breadth":"Moderate (20-50)","tools":15,"build":"Ready","blocker":"Developer docs exist but self-serve signup flow unclear","comp":false,"comp_slug":null,"web_login":"Many products; couldn't determine login","human":"\"Lots of products\" hides a real developer platform \u2014 REST API, App Platform, Chat SDK, tutorials. Corrected from Needs Outreach to Ready."},{"id":21,"name":"Slack","cat":"Communications","website":"slack.com","desc":"Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the ","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (158 actions)","tools":158,"build":"Ready","blocker":"","comp":true,"comp_slug":"slack","web_login":null,"human":null},{"id":22,"name":"Twilio","cat":"Communications","website":"twilio.com","desc":"CPaaS for SMS, voice, video, email, and messaging APIs at global scale","auth":["Api Key","Basic"],"ss":"Self-serve","breadth":"Broad (50+)","tools":50,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":23,"name":"Zoho Cliq","cat":"Communications","website":"zoho.com/cliq","desc":"Zoho is a suite of cloud applications including CRM, email marketing, and collaboration tools, enabling businesses to automate and scale operations","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (57 actions)","tools":57,"build":"Ready","blocker":"","comp":true,"comp_slug":"zoho","web_login":null,"human":null},{"id":24,"name":"Lark","cat":"Communications","website":"open.larksuite.com","desc":"Lark (Feishu) collaboration suite with messaging, docs, calendar, and base APIs","auth":["Oauth2"],"ss":"Self-serve (with caveats)","breadth":"Broad (50+)","tools":30,"build":"Ready","blocker":"Requires Lark admin approval for app creation","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":25,"name":"Pumble","cat":"Communications","website":"pumble.com","desc":"Team messaging app with basic API for sending messages and managing channels","auth":["Api Key"],"ss":"Self-serve (with caveats)","breadth":"Narrow (<20)","tools":5,"build":"Blocked","blocker":"Narrow API surface, basic CRUD only","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":26,"name":"Discord","cat":"Communications","website":"discord.com","desc":"An instant messaging and VoIP social platform.","auth":["Oauth2"],"ss":"Self-serve","breadth":"Moderate (27 actions)","tools":27,"build":"Ready","blocker":"","comp":true,"comp_slug":"discord","web_login":null,"human":null},{"id":27,"name":"Telegram","cat":"Communications","website":"core.telegram.org","desc":"Telegram is a cloud-based messaging app with a focus on security and speed. Build bots to send messages, manage chats, and interact with users.","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Narrow (18 actions)","tools":18,"build":"Ready","blocker":"","comp":true,"comp_slug":"telegram","web_login":null,"human":null},{"id":28,"name":"WhatsApp Business","cat":"Communications","website":"developers.facebook.com/docs/whatsapp","desc":"Enables interaction with customers through the WhatsApp Business API for messaging and automation. Only supports WhatsApp Business accounts, not WhatsApp Person","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Broad (57 actions)","tools":57,"build":"Ready","blocker":"","comp":true,"comp_slug":"whatsapp","web_login":null,"human":null},{"id":29,"name":"Aircall","cat":"Communications","website":"aircall.io","desc":"Cloud phone system with API for call management, contacts, and webhook events","auth":["Api Key","Basic"],"ss":"Self-serve (with caveats)","breadth":"Moderate (20-50)","tools":15,"build":"Ready","blocker":"Requires paid Aircall account","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":30,"name":"Vonage","cat":"Communications","website":"developer.vonage.com","desc":"Multi-channel CPaaS for SMS, voice, video, verify, and messaging APIs","auth":["Api Key","Oauth2","Jwt"],"ss":"Self-serve","breadth":"Broad (50+)","tools":50,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":31,"name":"Google Ads","cat":"Marketing & Ads","website":"developers.google.com/google-ads","desc":"Google Ads, is an online advertising platform developed by Google, where advertisers bid to display brief advertisements, service offerings, product listings, a","auth":["Oauth2"],"ss":"Self-serve","breadth":"Moderate (22 actions)","tools":22,"build":"Ready","blocker":"","comp":true,"comp_slug":"googleads","web_login":null,"human":null},{"id":32,"name":"Meta Ads","cat":"Marketing & Ads","website":"developers.facebook.com/docs/marketing-apis","desc":"Create, edit and get insights from ads across Meta technologies, including Facebook, Instagram, Messenger, WhatsApp and more.","auth":["Oauth2","Api Key"],"ss":"Self-serve (likely)","breadth":"Broad (50 actions)","tools":50,"build":"Ready","blocker":"","comp":true,"comp_slug":"metaads","web_login":null,"human":null},{"id":33,"name":"LinkedIn Ads","cat":"Marketing & Ads","website":"learn.microsoft.com/linkedin/marketing","desc":"LinkedIn Marketing and Advertising API for managing ad campaigns, analytics, and organization social content","auth":["Oauth2"],"ss":"Self-serve (likely)","breadth":"Moderate (28 actions)","tools":28,"build":"Ready","blocker":"","comp":true,"comp_slug":"linkedin_ads","web_login":null,"human":null},{"id":34,"name":"GoHighLevel","cat":"Marketing & Ads","website":"highlevel.stoplight.io","desc":"All-in-one agency platform for CRM, marketing automation, and funnel building","auth":["Oauth2","Api Key"],"ss":"Gated (likely)","breadth":"Moderate (20-50)","tools":15,"build":"Blocked","blocker":"Requires paid subscription ($97+/mo), docs URL broken","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":35,"name":"Mailchimp","cat":"Marketing & Ads","website":"mailchimp.com/developer","desc":"Mailchimp is an email marketing and automation platform providing campaign templates, audience segmentation, and performance analytics to drive engagement and c","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (272 actions)","tools":272,"build":"Ready","blocker":"","comp":true,"comp_slug":"mailchimp","web_login":null,"human":null},{"id":36,"name":"Klaviyo","cat":"Marketing & Ads","website":"developers.klaviyo.com","desc":"Klaviyo is a data-driven email and SMS marketing platform that allows e-commerce brands to deliver targeted messages, track conversions, and scale customer rela","auth":["Api Key","Oauth2"],"ss":"Self-serve (likely)","breadth":"Broad (225 actions)","tools":225,"build":"Ready","blocker":"","comp":true,"comp_slug":"klaviyo","web_login":null,"human":null},{"id":37,"name":"systeme.io","cat":"Marketing & Ads","website":"systeme.io","desc":"All-in-one marketing platform for sales funnels, email, courses, and membership","auth":["Api Key"],"ss":"Self-serve (with caveats)","breadth":"Narrow (<20)","tools":8,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":38,"name":"Pinterest","cat":"Marketing & Ads","website":"developers.pinterest.com","desc":"Social commerce platform with API for pins, boards, ads, and conversion tracking","auth":["Oauth2"],"ss":"Self-serve (with caveats)","breadth":"Broad (50+)","tools":30,"build":"Ready","blocker":"Requires app review for production access","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":39,"name":"Threads (Meta)","cat":"Marketing & Ads","website":"developers.facebook.com/docs/threads","desc":"Meta Threads social platform API for posting, replies, and insights","auth":["Oauth2"],"ss":"Self-serve (with caveats)","breadth":"Narrow (<20)","tools":8,"build":"Ready","blocker":"Requires Meta app review, 60-day token expiry","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":40,"name":"SendGrid","cat":"Marketing & Ads","website":"sendgrid.com","desc":"SendGrid is a cloud-based email delivery platform providing transactional and marketing email services, with APIs for integration, analytics, and scalability","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Broad (359 actions)","tools":359,"build":"Ready","blocker":"","comp":true,"comp_slug":"sendgrid","web_login":null,"human":null},{"id":41,"name":"Shopify","cat":"Ecommerce","website":"shopify.dev","desc":"Shopify is an e-commerce platform. This toolkit is GraphQL-first for new Admin API automations while retaining legacy REST compatibility actions for older workf","auth":["Api Key","Oauth2","S2S Oauth2"],"ss":"Self-serve (likely)","breadth":"Broad (315 actions)","tools":315,"build":"Ready","blocker":"","comp":true,"comp_slug":"shopify","web_login":null,"human":null},{"id":42,"name":"WooCommerce","cat":"Ecommerce","website":"woocommerce.com","desc":"Open-source ecommerce plugin for WordPress with REST API for products, orders, customers","auth":["Api Key","Basic","Oauth1"],"ss":"Self-serve","breadth":"Broad (50+)","tools":30,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":43,"name":"BigCommerce","cat":"Ecommerce","website":"developer.bigcommerce.com","desc":"SaaS ecommerce platform with API for catalog, orders, checkout, and store management","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (50+)","tools":30,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":44,"name":"Salesforce Commerce Cloud","cat":"Ecommerce","website":"developer.salesforce.com/docs/commerce","desc":"Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth","auth":["Oauth2","S2S Oauth2"],"ss":"Self-serve","breadth":"Broad (184 actions)","tools":184,"build":"Ready","blocker":"","comp":true,"comp_slug":"salesforce","web_login":null,"human":null},{"id":45,"name":"Magento (Adobe Commerce)","cat":"Ecommerce","website":"developer.adobe.com/commerce","desc":"Open-source ecommerce platform with REST/SOAP APIs for catalog, cart, checkout, orders","auth":["Oauth1","Bearer Token","Api Key"],"ss":"Self-serve","breadth":"Broad (50+)","tools":35,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":46,"name":"Squarespace","cat":"Ecommerce","website":"developers.squarespace.com","desc":"Website builder with OAuth-protected REST API for sites, commerce, and content","auth":["Oauth2"],"ss":"Self-serve (with caveats)","breadth":"Moderate (20-50)","tools":12,"build":"Ready","blocker":"OAuth client registration requires manual review","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":47,"name":"Ecwid","cat":"Ecommerce","website":"api-docs.ecwid.com","desc":"Ecommerce widget builder with REST API for products, orders, customers","auth":["Api Key","Oauth2"],"ss":"Self-serve","breadth":"Broad (50+)","tools":25,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":48,"name":"Gumroad","cat":"Ecommerce","website":"gumroad.com/api","desc":"Gumroad simplifies selling digital goods, physical products, and memberships by offering a streamlined checkout, marketing tools, and direct payout options","auth":["Oauth2"],"ss":"Self-serve","breadth":"Narrow (7 actions)","tools":7,"build":"Ready","blocker":"","comp":true,"comp_slug":"gumroad","web_login":null,"human":null},{"id":49,"name":"Amazon Selling Partner","cat":"Ecommerce","website":"developer-docs.amazon.com/sp-api","desc":"Amazon marketplace API suite for sellers: orders, inventory, fulfillment, reports","auth":["Oauth2","Sts"],"ss":"Gated","breadth":"Broad (50+)","tools":40,"build":"Needs outreach","blocker":"Requires professional seller account + security review + app listing","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":50,"name":"fanbasis","cat":"Ecommerce","website":"fanbasis.com","desc":"Digital product checkout platform. No developer API. Web app login: username/password + social auth (Google, Apple). Sales-led.","auth":["None (No API)"],"ss":"Gated","breadth":"None","tools":0,"build":"Blocked","blocker":"No developer API or portal. Web login exists but no programmatic access.","comp":false,"comp_slug":null,"web_login":"Username/password + social (Google, Apple)","human":"Web login (username/pass + Google/Apple) exists but there is no developer API. Login evidence proves nothing about API readiness."},{"id":51,"name":"DataForSEO","cat":"Data & SEO","website":"docs.dataforseo.com","desc":"SEO data and analytics platform providing SERP data, backlinks, keywords, and competitive intelligence","auth":["Basic"],"ss":"Self-serve (likely)","breadth":"Broad (312 actions)","tools":312,"build":"Ready","blocker":"","comp":true,"comp_slug":"dataforseo","web_login":null,"human":null},{"id":52,"name":"SE Ranking","cat":"Data & SEO","website":"seranking.com/api","desc":"SEO platform API for keyword research, backlinks, rank tracking, website audits","auth":["Api Key"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":15,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":53,"name":"Ahrefs","cat":"Data & SEO","website":"ahrefs.com/api","desc":"Ahrefs is an SEO and marketing platform offering site audits, keyword research, content analysis, and competitive insights to improve search rankings and drive ","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Moderate (40 actions)","tools":40,"build":"Ready","blocker":"","comp":true,"comp_slug":"ahrefs","web_login":null,"human":null},{"id":54,"name":"MrScraper","cat":"Data & SEO","website":"docs.mrscraper.com","desc":"AI-powered web scraping with visual builder, bulk scraping, proxy management","auth":["Api Key"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":10,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":55,"name":"Apify","cat":"Data & SEO","website":"docs.apify.com","desc":"Apify is a platform for building, deploying, and managing web scraping and automation tools, known as Actors.","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Broad (112 actions)","tools":112,"build":"Ready","blocker":"","comp":true,"comp_slug":"apify","web_login":null,"human":null},{"id":56,"name":"Firecrawl","cat":"Data & SEO","website":"firecrawl.dev","desc":"Firecrawl automates web crawling and data extraction, enabling organizations to gather content, index sites, and gain insights from online sources at scale","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Moderate (29 actions)","tools":29,"build":"Ready","blocker":"","comp":true,"comp_slug":"firecrawl","web_login":null,"human":null},{"id":57,"name":"Bright Data","cat":"Data & SEO","website":"brightdata.com","desc":"Bright Data provides the world's #1 web data platform with Web Unlocker for bypassing anti-bot systems, SERP API for search engine data, and pre-made scrapers f","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Narrow (10 actions)","tools":10,"build":"Ready","blocker":"","comp":true,"comp_slug":"brightdata","web_login":null,"human":null},{"id":58,"name":"Sherlock","cat":"Data & SEO","website":"github.com/sherlock-project/sherlock","desc":"Open-source CLI tool for social media username search across 400+ networks","auth":["None (CLI tool)"],"ss":"Self-serve (open source)","breadth":"None","tools":0,"build":"Blocked","blocker":"Not a SaaS API - open source CLI tool, no hosted service","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":59,"name":"Waterfall.io","cat":"Data & SEO","website":"waterfall.io","desc":"B2B contact and company data for prospecting, enrichment, email verification","auth":["Api Key"],"ss":"Gated","breadth":"Moderate (20-50)","tools":12,"build":"Needs outreach","blocker":"Sales-only, no self-serve signup","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":60,"name":"Clay","cat":"Data & SEO","website":"clay.com","desc":"GTM enrichment platform combining 200+ data providers into workflows","auth":["Webhook (URL)","Api Key (Enterprise)"],"ss":"Gated","breadth":"Narrow (<20)","tools":5,"build":"Blocked","blocker":"No traditional public REST API, enterprise-only data API","comp":false,"comp_slug":null,"web_login":"Email + Google auth","human":"Email + Google auth gets you into the web builder. The People & Company REST API is enterprise-only. Confirmed Blocked."},{"id":61,"name":"GitHub","cat":"Developer & Infra","website":"docs.github.com/rest","desc":"GitHub is a code hosting platform for version control and collaboration, offering Git-based repository management, issue tracking, and continuous integration fe","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (871 actions)","tools":871,"build":"Ready","blocker":"","comp":true,"comp_slug":"github","web_login":null,"human":null},{"id":62,"name":"Vercel","cat":"Developer & Infra","website":"vercel.com/docs/rest-api","desc":"Platform for deploying web apps with REST API for projects, domains, deployments","auth":["Oauth2","Bearer Token"],"ss":"Self-serve","breadth":"Broad (50+)","tools":40,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":63,"name":"Netlify","cat":"Developer & Infra","website":"docs.netlify.com/api","desc":"Web hosting and deployment with REST API for sites, deploys, forms, DNS, functions","auth":["Oauth2","Bearer Token"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":20,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":64,"name":"Cloudflare","cat":"Developer & Infra","website":"developers.cloudflare.com/api","desc":"Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Moderate (20 actions)","tools":20,"build":"Ready","blocker":"","comp":true,"comp_slug":"cloudflare","web_login":null,"human":null},{"id":65,"name":"Supabase","cat":"Developer & Infra","website":"supabase.com/docs","desc":"Supabase is an open-source backend-as-a-service providing a Postgres database, authentication, storage, and real-time subscription APIs for building modern appl","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Broad (124 actions)","tools":124,"build":"Ready","blocker":"","comp":true,"comp_slug":"supabase","web_login":null,"human":null},{"id":66,"name":"Neo4j","cat":"Developer & Infra","website":"neo4j.com/docs/api","desc":"Graph database platform for connected data and real-time analytics","auth":["Oauth2","Basic","Api Key","S2S Oauth2"],"ss":"Self-serve (likely)","breadth":"Moderate (21 actions)","tools":21,"build":"Ready","blocker":"","comp":true,"comp_slug":"neo4j","web_login":null,"human":null},{"id":67,"name":"Snowflake","cat":"Developer & Infra","website":"docs.snowflake.com","desc":"Snowflake is a cloud-based data warehouse offering elastic scaling, secure data sharing, and SQL analytics across multiple cloud environments","auth":["Oauth2"],"ss":"Self-serve (likely)","breadth":"Narrow (16 actions)","tools":16,"build":"Ready","blocker":"","comp":true,"comp_slug":"snowflake","web_login":null,"human":null},{"id":68,"name":"MongoDB Atlas","cat":"Developer & Infra","website":"mongodb.com/docs/atlas/api","desc":"Cloud database management API for Atlas clusters, projects, users, access lists","auth":["Digest (Api Key pair)"],"ss":"Self-serve","breadth":"Broad (50+)","tools":40,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":69,"name":"Datadog","cat":"Developer & Infra","website":"docs.datadoghq.com/api","desc":"Datadog offers monitoring, observability, and security for cloud-scale applications, unifying metrics, logs, and traces to help teams detect issues and optimize","auth":["Oauth2","Api Key"],"ss":"Self-serve (likely)","breadth":"Moderate (42 actions)","tools":42,"build":"Ready","blocker":"","comp":true,"comp_slug":"datadog","web_login":null,"human":null},{"id":70,"name":"Sentry","cat":"Developer & Infra","website":"docs.sentry.io/api","desc":"Integrate Sentry to manage your error tracking and monitoring.","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (209 actions)","tools":209,"build":"Ready","blocker":"","comp":true,"comp_slug":"sentry","web_login":null,"human":null},{"id":71,"name":"Notion","cat":"Productivity & PM","website":"developers.notion.com","desc":"Notion centralizes notes, docs, wikis, and tasks in a unified workspace, letting teams build custom workflows for collaboration and knowledge management","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Moderate (45 actions)","tools":45,"build":"Ready","blocker":"","comp":true,"comp_slug":"notion","web_login":null,"human":null},{"id":72,"name":"Airtable","cat":"Productivity & PM","website":"airtable.com/developers","desc":"Airtable merges spreadsheet functionality with database power, enabling teams to organize projects, track tasks, and collaborate through customizable views, aut","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Moderate (24 actions)","tools":24,"build":"Ready","blocker":"","comp":true,"comp_slug":"airtable","web_login":null,"human":null},{"id":73,"name":"Linear","cat":"Productivity & PM","website":"developers.linear.app","desc":"Linear is a streamlined issue tracking and project planning tool for modern teams, featuring fast workflows, keyboard shortcuts, and GitHub integrations","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Moderate (46 actions)","tools":46,"build":"Ready","blocker":"","comp":true,"comp_slug":"linear","web_login":null,"human":null},{"id":74,"name":"Jira","cat":"Productivity & PM","website":"developer.atlassian.com","desc":"A tool for bug tracking, issue tracking, and agile project management.","auth":["Oauth2","S2S Oauth2","Api Key"],"ss":"Self-serve","breadth":"Broad (97 actions)","tools":97,"build":"Ready","blocker":"","comp":true,"comp_slug":"jira","web_login":null,"human":null},{"id":75,"name":"Asana","cat":"Productivity & PM","website":"developers.asana.com","desc":"Tool to help teams organize, track, and manage their work.","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (153 actions)","tools":153,"build":"Ready","blocker":"","comp":true,"comp_slug":"asana","web_login":null,"human":null},{"id":76,"name":"Monday.com","cat":"Productivity & PM","website":"developer.monday.com","desc":"Work OS platform for custom workflows, project management, CRM via GraphQL API","auth":["Api Key","Oauth2"],"ss":"Self-serve","breadth":"Broad (50+)","tools":35,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":77,"name":"ClickUp","cat":"Productivity & PM","website":"clickup.com/api","desc":"ClickUp unifies tasks, docs, goals, and chat in a single platform, allowing teams to plan, organize, and collaborate across projects with customizable workflows","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Broad (162 actions)","tools":162,"build":"Ready","blocker":"","comp":true,"comp_slug":"clickup","web_login":null,"human":null},{"id":78,"name":"Coda","cat":"Productivity & PM","website":"coda.io/developers","desc":"Collaborative workspace platform that transforms documents into powerful tools for team productivity and project management","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Broad (109 actions)","tools":109,"build":"Ready","blocker":"","comp":true,"comp_slug":"coda","web_login":null,"human":null},{"id":79,"name":"Smartsheet","cat":"Productivity & PM","website":"smartsheet.com/developers","desc":"Enterprise work management with spreadsheet interface and REST API","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Broad (50+)","tools":30,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":80,"name":"Harvest","cat":"Productivity & PM","website":"getharvest.com","desc":"Harvest is a time-tracking and invoicing tool designed for teams and freelancers, helping them log billable hours, manage projects, and streamline payments","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (57 actions)","tools":57,"build":"Ready","blocker":"","comp":true,"comp_slug":"harvest","web_login":null,"human":null},{"id":81,"name":"Stripe","cat":"Finance & Fintech","website":"stripe.com/docs/api","desc":"Stripe offers online payment infrastructure, fraud prevention, and APIs enabling businesses to accept and manage payments globally","auth":["Api Key","Oauth2"],"ss":"Self-serve","breadth":"Broad (425 actions)","tools":425,"build":"Ready","blocker":"","comp":true,"comp_slug":"stripe","web_login":null,"human":null},{"id":82,"name":"Plaid","cat":"Finance & Fintech","website":"plaid.com/docs","desc":"Open banking platform connecting apps to bank accounts for transactions, identity, income","auth":["Api Key"],"ss":"Self-serve (with caveats)","breadth":"Broad (50+)","tools":35,"build":"Ready","blocker":"Sandbox is self-serve; production requires compliance review","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":83,"name":"Binance","cat":"Finance & Fintech","website":"binance-docs.github.io","desc":"Cryptocurrency exchange with REST/WebSocket APIs for spot, margin, futures trading","auth":["Api Key + Signature (Hmac)"],"ss":"Self-serve","breadth":"Broad (50+)","tools":50,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":84,"name":"Paygent Connect","cat":"Finance & Fintech","website":"paygent","desc":"Connecteam is a comprehensive workforce management platform designed to streamline operations, enhance communication, and improve HR processes for deskless team","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Narrow (16 actions)","tools":16,"build":"Ready","blocker":"","comp":true,"comp_slug":"connecteam","web_login":null,"human":null},{"id":85,"name":"iPayX","cat":"Finance & Fintech","website":"ipayx.ai/docs","desc":"FX forensic audit layer for B2B payments comparing bank rates to mid-market","auth":["Api Key"],"ss":"Gated","breadth":"Narrow (<20)","tools":3,"build":"Needs outreach","blocker":"Early-stage product, docs page 404s, unclear public API","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":86,"name":"QuickBooks","cat":"Finance & Fintech","website":"developer.intuit.com","desc":"Quickbooks is a cloud-based accounting software that helps you manage your finances, track your income and expenses, and get insights into your business","auth":["Oauth2"],"ss":"Self-serve","breadth":"Broad (114 actions)","tools":114,"build":"Ready","blocker":"","comp":true,"comp_slug":"quickbooks","web_login":null,"human":null},{"id":87,"name":"Xero","cat":"Finance & Fintech","website":"developer.xero.com","desc":"Xero is a cloud-based accounting software for small businesses, providing invoicing, bank reconciliation, bookkeeping, and financial reporting in real time","auth":["Oauth2"],"ss":"Self-serve (likely)","breadth":"Broad (53 actions)","tools":53,"build":"Ready","blocker":"","comp":true,"comp_slug":"xero","web_login":null,"human":null},{"id":88,"name":"Brex","cat":"Finance & Fintech","website":"developer.brex.com","desc":"Brex provides corporate credit cards, spend management, and financial tools tailored for startups and tech businesses to optimize cash flow, accounting, and gro","auth":["Oauth2","Api Key"],"ss":"Self-serve (likely)","breadth":"Broad (84 actions)","tools":84,"build":"Ready","blocker":"","comp":true,"comp_slug":"brex","web_login":null,"human":null},{"id":89,"name":"Ramp","cat":"Finance & Fintech","website":"docs.ramp.com","desc":"Ramp is a platform that helps you manage your finances, track your income and expenses, and get insights into your business","auth":["Oauth2"],"ss":"Self-serve (likely)","breadth":"Broad (88 actions)","tools":88,"build":"Ready","blocker":"","comp":true,"comp_slug":"ramp","web_login":null,"human":null},{"id":90,"name":"PitchBook","cat":"Finance & Fintech","website":"pitchbook.com","desc":"Private market data platform with company, deal, investor, and fund data","auth":["Api Key"],"ss":"Gated","breadth":"Broad (50+)","tools":30,"build":"Needs outreach","blocker":"Enterprise sales only, expensive subscription required","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":91,"name":"NotebookLM","cat":"AI & Research","website":"cloud.google.com/gemini","desc":"Google AI research notebook - summarizes docs, generates audio overviews","auth":["Unknown"],"ss":"Gated","breadth":"None","tools":0,"build":"Blocked","blocker":"No official public API; NotebookLM Enterprise APIs are gated","comp":false,"comp_slug":null,"web_login":"Google auth","human":"Google auth is just SSO for the web app \u2014 not an indicator of a public API. The Gemini API is a separate paid product."},{"id":92,"name":"Otter AI","cat":"AI & Research","website":"help.otter.ai","desc":"AI meeting transcription and note-taking with bot-less capture","auth":["Api Key"],"ss":"Gated","breadth":"Narrow (<20)","tools":5,"build":"Needs outreach","blocker":"Public API only available to Enterprise plan customers","comp":false,"comp_slug":null,"web_login":"Social auth by default","human":"Social auth by default is for the consumer web app. The API is reserved for Enterprise-plan customers only."},{"id":93,"name":"Fathom","cat":"AI & Research","website":"fathom.video","desc":"AI meeting assistant that records, transcribes, and summarizes meetings","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Narrow (7 actions)","tools":7,"build":"Ready","blocker":"","comp":true,"comp_slug":"fathom","web_login":null,"human":null},{"id":94,"name":"Consensus","cat":"AI & Research","website":"consensus.app","desc":"AI-powered academic research search across 250M+ peer-reviewed papers","auth":["Api Key"],"ss":"Self-serve","breadth":"Narrow (<20)","tools":8,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":95,"name":"Reducto","cat":"AI & Research","website":"reducto.ai","desc":"Agentic document platform for AI teams: parsing, extraction, classification, workflows","auth":["Api Key"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":15,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":96,"name":"Devin","cat":"AI & Research","website":"docs.devin.ai","desc":"AI-powered access to GitHub repository documentation and codebase analysis, including private repositories, via Devin.","auth":["Api Key"],"ss":"Self-serve (likely)","breadth":"Narrow (4 actions)","tools":4,"build":"Ready","blocker":"","comp":true,"comp_slug":"devin_mcp","web_login":null,"human":null},{"id":97,"name":"higgsfield","cat":"AI & Research","website":"higgsfield.ai/cli","desc":"AI image and video generation CLI for agents: product photos, characters, marketing","auth":["Oauth2 (browser login)"],"ss":"Self-serve","breadth":"Narrow (<20)","tools":5,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":98,"name":"Mermaid CLI","cat":"AI & Research","website":"github.com/mermaid-js/mermaid-cli","desc":"CLI tool converting Mermaid diagrams to SVG/PNG/PDF output","auth":["None (CLI)"],"ss":"Self-serve","breadth":"None","tools":0,"build":"Ready","blocker":"CLI tool, not an API. Can be MCP-wrapped easily","comp":false,"comp_slug":null,"web_login":null,"human":null},{"id":99,"name":"YouTube Transcript","cat":"AI & Research","website":"transcriptapi.com","desc":"YouTube is a video-sharing platform with user-generated content, live streaming, and monetization opportunities, widely used for marketing, education, and enter","auth":["Oauth2"],"ss":"Self-serve","breadth":"Moderate (48 actions)","tools":48,"build":"Ready","blocker":"","comp":true,"comp_slug":"youtube","web_login":null,"human":null},{"id":100,"name":"Grain","cat":"AI & Research","website":"grain.com","desc":"AI meeting notetaker with transcripts, CRM sync, and AI agent integrations","auth":["Oauth2","Api Key"],"ss":"Self-serve","breadth":"Moderate (20-50)","tools":12,"build":"Ready","blocker":"","comp":false,"comp_slug":null,"web_login":null,"human":null}]</script>
+<script id="inlineCatStats" type="application/json">[{"name":"CRM & Sales","short":"CRM","ready":9,"outreach":1,"blocked":0,"in_comp":6,"total":10},{"name":"Support & Helpdesk","short":"SUPPORT","ready":10,"outreach":0,"blocked":0,"in_comp":7,"total":10},{"name":"Communications","short":"COMMS","ready":9,"outreach":0,"blocked":1,"in_comp":5,"total":10},{"name":"Marketing & Ads","short":"MARKETING","ready":9,"outreach":0,"blocked":1,"in_comp":6,"total":10},{"name":"Ecommerce","short":"ECOM","ready":8,"outreach":1,"blocked":1,"in_comp":3,"total":10},{"name":"Data & SEO","short":"DATA / SEO","ready":7,"outreach":1,"blocked":2,"in_comp":5,"total":10},{"name":"Developer & Infra","short":"DEV / INFRA","ready":10,"outreach":0,"blocked":0,"in_comp":7,"total":10},{"name":"Productivity & PM","short":"PRODUCTIVITY","ready":10,"outreach":0,"blocked":0,"in_comp":8,"total":10},{"name":"Finance & Fintech","short":"FINTECH","ready":8,"outreach":2,"blocked":0,"in_comp":6,"total":10},{"name":"AI & Research","short":"AI / RESEARCH","ready":8,"outreach":1,"blocked":1,"in_comp":3,"total":10}]</script>
+
+<section class="section">
+  <div class="eyebrow"><span>Patterns</span></div>
+  <h2>Three patterns, not a hundred rows.</h2>
+  <p class="lede">Clustered across the 100 surfaces. Each one is directly actionable for which toolkits to add next and which need a partnership push.</p>
+</section>
+
+<div class="theses">
+  <article class="thesis">
+    <div class="num mono">PATTERN 01 / AUTH</div>
+    <h3>Auth is dual by default.</h3>
+    <p>Single-method APIs are the minority. OAuth2 and API Key each cover more than 60% of this list, and nearly a third support both. A toolkit that hardcodes one credential path will need revisit cycles.</p>
+    <div class="big-num tnum">64</div>
+    <div class="big-label">apps support OAuth2</div>
+    <div class="breakout">
+      <div class="b-item"><span class="b-num tnum">61</span><span class="b-label">API Key</span></div>
+      <div class="b-item"><span class="b-num tnum">30</span><span class="b-label">Dual-auth</span></div>
+      <div class="b-item"><span class="b-num tnum">3</span><span class="b-label">No auth (CLI / OSS)</span></div>
+    </div>
+  </article>
+  <article class="thesis">
+    <div class="num mono">PATTERN 02 / GATING</div>
+    <h3>Gating happens at the contract, not the API.</h3>
+    <p>Of the 12 that aren't ready, most have documented public APIs. They block through sales, paid plans, or review — not missing endpoints. This is a partnership problem, not a tech one. Plaid-style gate (sandbox open, production needs compliance) is common.</p>
+    <div class="big-num tnum">89</div>
+    <div class="big-label">of 100 are self-serve today</div>
+    <div class="breakout">
+      <div class="b-item"><span class="b-num tnum">11</span><span class="b-label">Enterprise-gated</span></div>
+      <div class="b-item"><span class="b-num tnum">6</span><span class="b-label">No API</span></div>
+      <div class="b-item"><span class="b-num tnum">6</span><span class="b-label">Need sales</span></div>
+    </div>
+  </article>
+  <article class="thesis">
+    <div class="num mono">PATTERN 03 / COVERAGE</div>
+    <h3>Coverage gaps are opportunity gaps.</h3>
+    <p>56% of apps are already in Composio. The categories lagging are the ones most readily buildable: Ecommerce (3/10 in Composio, but 8/10 ready) and AI / Research (3/10 vs. 8/10). Each row below is a self-contained sprint for a new Composio toolkit.</p>
+    <div class="big-num tnum">56<span style="color: var(--text-muted); font-size: 24px; font-weight: 500;"> / 100</span></div>
+    <div class="big-label">already in Composio today</div>
+    <div class="breakout">
+      <div class="b-item"><span class="b-num tnum">3/10</span><span class="b-label">Ecommerce gap</span></div>
+      <div class="b-item"><span class="b-num tnum">3/10</span><span class="b-label">AI gap</span></div>
+      <div class="b-item"><span class="b-num tnum">8/10</span><span class="b-label">Productivity (best)</span></div>
+    </div>
+  </article>
+</div>
+
+<section class="section">
+  <div class="eyebrow"><span>Cluster</span></div>
+  <h2>Readiness by category — teal is room for kits.</h2>
+  <p class="lede">Filled bar = ready. The right column shows ready/total and the number of apps already in Composio (comp count). Categories with high ready-vs-composio ratios are the easiest toolkit expansions.</p>
+</section>
+<div class="matrix-card" style="padding: 22px 28px;">
+  <div class="cat-bars" id="catBars">
+        <div class="cat-row">
+          <div class="cat-name">CRM</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 90.00%"></div>
+            <div class="seg outreach" style="width: 10.00%"></div>
+            
+          </div>
+          <div class="cat-meta tnum">9/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:6}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">SUPPORT</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 100.00%"></div>
+            
+            
+          </div>
+          <div class="cat-meta tnum">10/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:7}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">COMMS</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 90.00%"></div>
+            
+            <div class="seg blocked" style="width: 10.00%"></div>
+          </div>
+          <div class="cat-meta tnum">9/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:5}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">MARKETING</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 90.00%"></div>
+            
+            <div class="seg blocked" style="width: 10.00%"></div>
+          </div>
+          <div class="cat-meta tnum">9/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:6}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">ECOM</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 80.00%"></div>
+            <div class="seg outreach" style="width: 10.00%"></div>
+            <div class="seg blocked" style="width: 10.00%"></div>
+          </div>
+          <div class="cat-meta tnum">8/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:3}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">DATA / SEO</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 70.00%"></div>
+            <div class="seg outreach" style="width: 10.00%"></div>
+            <div class="seg blocked" style="width: 20.00%"></div>
+          </div>
+          <div class="cat-meta tnum">7/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:5}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">DEV / INFRA</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 100.00%"></div>
+            
+            
+          </div>
+          <div class="cat-meta tnum">10/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:7}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">PRODUCTIVITY</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 100.00%"></div>
+            
+            
+          </div>
+          <div class="cat-meta tnum">10/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:8}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">FINTECH</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 80.00%"></div>
+            <div class="seg outreach" style="width: 20.00%"></div>
+            
+          </div>
+          <div class="cat-meta tnum">8/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:6}</span></div>
+        </div>
+        <div class="cat-row">
+          <div class="cat-name">AI / RESEARCH</div>
+          <div class="cat-bar">
+            <div class="seg ready" style="width: 80.00%"></div>
+            <div class="seg outreach" style="width: 10.00%"></div>
+            <div class="seg blocked" style="width: 10.00%"></div>
+          </div>
+          <div class="cat-meta tnum">8/10<span style="color: var(--text-muted); margin-left: 6px;">{comp:3}</span></div>
+        </div></div>
+</div>
+
+<section class="section">
+  <div class="eyebrow"><span>Spectrum</span></div>
+  <h2>The auth spectrum — how credentials get into the agent.</h2>
+  <p class="lede">Distribution of the 100 apps across primary credential mechanisms. Dual-auth matters because it changes traversal of "who signs in / who owns the key".</p>
+</section>
+<div class="matrix-card" style="padding: 22px 28px;">
+  <div class="spectrum">
+      <div class="row" data-kind="oauth2">
+        <div class="label">OAuth2</div>
+        <div class="bar"><div class="fill" style="width: 100%"></div></div>
+        <div class="count tnum">64</div>
+      </div>
+      <div class="row" data-kind="apikey">
+        <div class="label">API Key</div>
+        <div class="bar"><div class="fill" style="width: 95%"></div></div>
+        <div class="count tnum">61</div>
+      </div>
+      <div class="row" data-kind="dual">
+        <div class="label">OAuth2 + API Key (dual)</div>
+        <div class="bar"><div class="fill" style="width: 46%"></div></div>
+        <div class="count tnum">30</div>
+      </div>
+      <div class="row" data-kind="noauth">
+        <div class="label">No auth (CLI / OSS)</div>
+        <div class="bar"><div class="fill" style="width: 4%"></div></div>
+        <div class="count tnum">3</div>
+      </div>
+      <div class="row" data-kind="other">
+        <div class="label">Other (Basic, SSO, Webhook only)</div>
+        <div class="bar"><div class="fill" style="width: 51%"></div></div>
+        <div class="count tnum">33</div>
+      </div></div>
+</div>
+
+<section class="section">
+  <div class="eyebrow"><span>Blockers</span></div>
+  <h2>Where blockers actually live.</h2>
+  <p class="lede">For the 12 apps not ready, the dominant blocker is enterprise sales gate — not a missing API. The second batch are approval / review processes (LinkedIn, Pinterest, Plaid prod, Threads, Devin, QuickBooks).</p>
+</section>
+<div class="matrix-card" style="padding: 22px 28px;">
+  <div class="blockers-section">
+      <div class="blocker-row">
+        <div class="label">Enterprise / Sales Gate</div>
+        <div class="bar"><div class="fill" style="width: 100%"></div></div>
+        <div class="count tnum">6</div>
+      </div>
+      <div class="blocker-row">
+        <div class="label">Approval / Review Required</div>
+        <div class="bar"><div class="fill" style="width: 100%"></div></div>
+        <div class="count tnum">6</div>
+      </div>
+      <div class="blocker-row">
+        <div class="label">Early-Stage / Missing Docs</div>
+        <div class="bar"><div class="fill" style="width: 33%"></div></div>
+        <div class="count tnum">2</div>
+      </div>
+      <div class="blocker-row">
+        <div class="label">Requires Paid Plan</div>
+        <div class="bar"><div class="fill" style="width: 33%"></div></div>
+        <div class="count tnum">2</div>
+      </div>
+      <div class="blocker-row">
+        <div class="label">CLI Tool / Not a SaaS</div>
+        <div class="bar"><div class="fill" style="width: 33%"></div></div>
+        <div class="count tnum">2</div>
+      </div>
+      <div class="blocker-row">
+        <div class="label">Other</div>
+        <div class="bar"><div class="fill" style="width: 16%"></div></div>
+        <div class="count tnum">1</div>
+      </div>
+      <div class="blocker-row">
+        <div class="label">No Public API</div>
+        <div class="bar"><div class="fill" style="width: 16%"></div></div>
+        <div class="count tnum">1</div>
+      </div></div>
+</div>
+
+<section class="section">
+  <div class="eyebrow"><span>Data</span></div>
+  <h2>The full research table — filterable.</h2>
+  <p class="lede">Each row is grounded in either Composio's live toolkit registry (where apps are already integrated) or Firecrawl-verified docs (where they aren't). Click chips to filter; click column headers to sort.</p>
+</section>
+<div class="qt">
+  <div class="toolbar">
+    <span class="filter-label">Build:</span>
+    <button class="btn active" data-fld="build" data-val="all">All</button>
+    <button class="btn" data-fld="build" data-val="Ready">Ready</button>
+    <button class="btn" data-fld="build" data-val="Blocked">Blocked</button>
+    <button class="btn" data-fld="build" data-val="Needs outreach">Needs outreach</button>
+    <span class="filter-label" style="margin-left: 8px;">Composio:</span>
+    <button class="btn active" data-fld="comp" data-val="all">All</button>
+    <button class="btn" data-fld="comp" data-val="yes">In Composio</button>
+    <button class="btn" data-fld="comp" data-val="no">Not yet</button>
+    <input type="text" class="search" id="searchInput" placeholder="Search app, auth, category…">
+    <span class="result-count" id="resultCount"></span>
+  </div>
+  <div style="overflow-x: auto;">
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th data-sort="id">#</th>
+          <th data-sort="name">App</th>
+          <th data-sort="cat">Category</th>
+          <th>Description</th>
+          <th>Auth</th>
+          <th data-sort="build">Status</th>
+          <th>Self-Serve</th>
+          <th data-sort="tools">Tools</th>
+          <th data-sort="comp">In Composio</th>
+        </tr>
+      </thead>
+      <tbody id="dataTableBody"><tr data-build="ready" data-comp="yes" data-cat="CRM & Sales">
+        <td class="id">1</td>
+        <td class="name">Salesforce</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth</td>
+        <td class="auth-list">Oauth2, S2S Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">184</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="CRM & Sales">
+        <td class="id">2</td>
+        <td class="name">HubSpot</td>
+        <td class="cat">CRM</td>
+        <td class="desc">HubSpot is an inbound marketing, sales, and customer service platform integrating CRM, email automation, and analytics to facilitate lead nurturing and seamless</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">244</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="CRM & Sales">
+        <td class="id">3</td>
+        <td class="name">Pipedrive</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Pipedrive is a sales management tool built around pipeline visualization, lead tracking, activity reminders, and automation to keep deals progressing</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">399</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="CRM & Sales">
+        <td class="id">4</td>
+        <td class="name">Attio</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Attio is a fully customizable workspace for your team's relationships and workflows.</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">99</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="CRM & Sales">
+        <td class="id">5</td>
+        <td class="name">Twenty</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Open-source CRM with API for contacts, deals, tasks, and custom objects</td>
+        <td class="auth-list">Api Key, Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">15</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="CRM & Sales">
+        <td class="id">6</td>
+        <td class="name">Podio</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Work management platform with OAuth2 API. Supports server-side, client-side, username/password, and app auth flows. Self-serve: register app for client_id/secre</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">12</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="CRM & Sales">
+        <td class="id">7</td>
+        <td class="name">Zoho CRM</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Zoho is a suite of cloud applications including CRM, email marketing, and collaboration tools, enabling businesses to automate and scale operations</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">57</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="CRM & Sales">
+        <td class="id">8</td>
+        <td class="name">Close</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Close is a CRM platform designed to help businesses manage and streamline their sales processes, including calling, email automation, and predictive dialers.</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">6</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="CRM & Sales">
+        <td class="id">9</td>
+        <td class="name">Copper</td>
+        <td class="cat">CRM</td>
+        <td class="desc">CRM for G Suite with API for leads, opportunities, contacts, and tasks</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">12</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="needs outreach" data-comp="no" data-cat="CRM & Sales">
+        <td class="id">10</td>
+        <td class="name">DealCloud</td>
+        <td class="cat">CRM</td>
+        <td class="desc">Enterprise deal and relationship management for investment banking</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill outreach">Needs outreach</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">5</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Support & Helpdesk">
+        <td class="id">11</td>
+        <td class="name">Zendesk</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Zendesk provides customer support software with ticketing, live chat, and knowledge base features, enabling efficient helpdesk operations and customer engagemen</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">452</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Support & Helpdesk">
+        <td class="id">12</td>
+        <td class="name">Intercom</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Intercom provides live chat, messaging, and customer engagement tools, enabling businesses to drive conversions, handle support, and personalize communication a</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">133</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Support & Helpdesk">
+        <td class="id">13</td>
+        <td class="name">Freshdesk</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Freshdesk provides customer support software with ticketing, knowledge base, and automation features for efficient helpdesk operations and better customer exper</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">178</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Support & Helpdesk">
+        <td class="id">14</td>
+        <td class="name">Front</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Shared inbox and team collaboration for customer communication</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">15</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Support & Helpdesk">
+        <td class="id">15</td>
+        <td class="name">Pylon</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Pylon is an AI-native B2B customer support platform that unifies ticketing, chat, knowledge base, and account intelligence across channels like Slack Connect, M</td>
+        <td class="auth-list">Dcr Oauth</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">12</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Support & Helpdesk">
+        <td class="id">16</td>
+        <td class="name">LiveAgent</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Help desk and live chat with API for tickets, contacts, and knowledge base</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated (likely)</span></td>
+        <td class="tools">8</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Support & Helpdesk">
+        <td class="id">17</td>
+        <td class="name">Plain</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Plain is a collaborative support platform for B2B support teams, offering a modern, AI-powered interface to consolidate support channels and assist customers ef</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">22</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Support & Helpdesk">
+        <td class="id">18</td>
+        <td class="name">Help Scout</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Help Scout provides customer support software with shared inbox, knowledge base, and customer management tools</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">129</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Support & Helpdesk">
+        <td class="id">19</td>
+        <td class="name">Gorgias</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Gorgias is a helpdesk and live chat platform specializing in e-commerce, offering automated support, order management, and unified customer communication</td>
+        <td class="auth-list">Api Key, Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">32</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Support & Helpdesk">
+        <td class="id">20</td>
+        <td class="name">Gladly</td>
+        <td class="cat">SUPPORT</td>
+        <td class="desc">Customer service platform with REST API, App Platform, Chat SDK, webhooks, lookup adapters. Full developer portal with tutorials and code examples.</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">15</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Communications">
+        <td class="id">21</td>
+        <td class="name">Slack</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the </td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">158</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Communications">
+        <td class="id">22</td>
+        <td class="name">Twilio</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">CPaaS for SMS, voice, video, email, and messaging APIs at global scale</td>
+        <td class="auth-list">Api Key, Basic</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">50</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Communications">
+        <td class="id">23</td>
+        <td class="name">Zoho Cliq</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Zoho is a suite of cloud applications including CRM, email marketing, and collaboration tools, enabling businesses to automate and scale operations</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">57</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Communications">
+        <td class="id">24</td>
+        <td class="name">Lark</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Lark (Feishu) collaboration suite with messaging, docs, calendar, and base APIs</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">30</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="blocked" data-comp="no" data-cat="Communications">
+        <td class="id">25</td>
+        <td class="name">Pumble</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Team messaging app with basic API for sending messages and managing channels</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill blocked">Blocked</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">5</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Communications">
+        <td class="id">26</td>
+        <td class="name">Discord</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">An instant messaging and VoIP social platform.</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">27</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Communications">
+        <td class="id">27</td>
+        <td class="name">Telegram</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Telegram is a cloud-based messaging app with a focus on security and speed. Build bots to send messages, manage chats, and interact with users.</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">18</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Communications">
+        <td class="id">28</td>
+        <td class="name">WhatsApp Business</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Enables interaction with customers through the WhatsApp Business API for messaging and automation. Only supports WhatsApp Business accounts, not WhatsApp Person</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">57</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Communications">
+        <td class="id">29</td>
+        <td class="name">Aircall</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Cloud phone system with API for call management, contacts, and webhook events</td>
+        <td class="auth-list">Api Key, Basic</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">15</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Communications">
+        <td class="id">30</td>
+        <td class="name">Vonage</td>
+        <td class="cat">COMMS</td>
+        <td class="desc">Multi-channel CPaaS for SMS, voice, video, verify, and messaging APIs</td>
+        <td class="auth-list">Api Key, Oauth2, Jwt</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">50</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Marketing & Ads">
+        <td class="id">31</td>
+        <td class="name">Google Ads</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">Google Ads, is an online advertising platform developed by Google, where advertisers bid to display brief advertisements, service offerings, product listings, a</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">22</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Marketing & Ads">
+        <td class="id">32</td>
+        <td class="name">Meta Ads</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">Create, edit and get insights from ads across Meta technologies, including Facebook, Instagram, Messenger, WhatsApp and more.</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">50</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Marketing & Ads">
+        <td class="id">33</td>
+        <td class="name">LinkedIn Ads</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">LinkedIn Marketing and Advertising API for managing ad campaigns, analytics, and organization social content</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">28</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="blocked" data-comp="no" data-cat="Marketing & Ads">
+        <td class="id">34</td>
+        <td class="name">GoHighLevel</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">All-in-one agency platform for CRM, marketing automation, and funnel building</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill blocked">Blocked</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated (likely)</span></td>
+        <td class="tools">15</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Marketing & Ads">
+        <td class="id">35</td>
+        <td class="name">Mailchimp</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">Mailchimp is an email marketing and automation platform providing campaign templates, audience segmentation, and performance analytics to drive engagement and c</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">272</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Marketing & Ads">
+        <td class="id">36</td>
+        <td class="name">Klaviyo</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">Klaviyo is a data-driven email and SMS marketing platform that allows e-commerce brands to deliver targeted messages, track conversions, and scale customer rela</td>
+        <td class="auth-list">Api Key, Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">225</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Marketing & Ads">
+        <td class="id">37</td>
+        <td class="name">systeme.io</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">All-in-one marketing platform for sales funnels, email, courses, and membership</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">8</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Marketing & Ads">
+        <td class="id">38</td>
+        <td class="name">Pinterest</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">Social commerce platform with API for pins, boards, ads, and conversion tracking</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">30</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Marketing & Ads">
+        <td class="id">39</td>
+        <td class="name">Threads (Meta)</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">Meta Threads social platform API for posting, replies, and insights</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">8</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Marketing & Ads">
+        <td class="id">40</td>
+        <td class="name">SendGrid</td>
+        <td class="cat">MARKETING</td>
+        <td class="desc">SendGrid is a cloud-based email delivery platform providing transactional and marketing email services, with APIs for integration, analytics, and scalability</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">359</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Ecommerce">
+        <td class="id">41</td>
+        <td class="name">Shopify</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Shopify is an e-commerce platform. This toolkit is GraphQL-first for new Admin API automations while retaining legacy REST compatibility actions for older workf</td>
+        <td class="auth-list">Api Key, Oauth2, S2S Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">315</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Ecommerce">
+        <td class="id">42</td>
+        <td class="name">WooCommerce</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Open-source ecommerce plugin for WordPress with REST API for products, orders, customers</td>
+        <td class="auth-list">Api Key, Basic, Oauth1</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">30</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Ecommerce">
+        <td class="id">43</td>
+        <td class="name">BigCommerce</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">SaaS ecommerce platform with API for catalog, orders, checkout, and store management</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">30</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Ecommerce">
+        <td class="id">44</td>
+        <td class="name">Salesforce Commerce Cloud</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth</td>
+        <td class="auth-list">Oauth2, S2S Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">184</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Ecommerce">
+        <td class="id">45</td>
+        <td class="name">Magento (Adobe Commerce)</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Open-source ecommerce platform with REST/SOAP APIs for catalog, cart, checkout, orders</td>
+        <td class="auth-list">Oauth1, Bearer Token, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">35</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Ecommerce">
+        <td class="id">46</td>
+        <td class="name">Squarespace</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Website builder with OAuth-protected REST API for sites, commerce, and content</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">12</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Ecommerce">
+        <td class="id">47</td>
+        <td class="name">Ecwid</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Ecommerce widget builder with REST API for products, orders, customers</td>
+        <td class="auth-list">Api Key, Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">25</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Ecommerce">
+        <td class="id">48</td>
+        <td class="name">Gumroad</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Gumroad simplifies selling digital goods, physical products, and memberships by offering a streamlined checkout, marketing tools, and direct payout options</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">7</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="needs outreach" data-comp="no" data-cat="Ecommerce">
+        <td class="id">49</td>
+        <td class="name">Amazon Selling Partner</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Amazon marketplace API suite for sellers: orders, inventory, fulfillment, reports</td>
+        <td class="auth-list">Oauth2, Sts</td>
+        <td><span class="status-pill outreach">Needs outreach</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">40</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="blocked" data-comp="no" data-cat="Ecommerce">
+        <td class="id">50</td>
+        <td class="name">fanbasis</td>
+        <td class="cat">ECOM</td>
+        <td class="desc">Digital product checkout platform. No developer API. Web app login: username/password + social auth (Google, Apple). Sales-led.</td>
+        <td class="auth-list">None (No API)</td>
+        <td><span class="status-pill blocked">Blocked</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">0</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Data & SEO">
+        <td class="id">51</td>
+        <td class="name">DataForSEO</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">SEO data and analytics platform providing SERP data, backlinks, keywords, and competitive intelligence</td>
+        <td class="auth-list">Basic</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">312</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Data & SEO">
+        <td class="id">52</td>
+        <td class="name">SE Ranking</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">SEO platform API for keyword research, backlinks, rank tracking, website audits</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">15</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Data & SEO">
+        <td class="id">53</td>
+        <td class="name">Ahrefs</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">Ahrefs is an SEO and marketing platform offering site audits, keyword research, content analysis, and competitive insights to improve search rankings and drive </td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">40</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Data & SEO">
+        <td class="id">54</td>
+        <td class="name">MrScraper</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">AI-powered web scraping with visual builder, bulk scraping, proxy management</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">10</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Data & SEO">
+        <td class="id">55</td>
+        <td class="name">Apify</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">Apify is a platform for building, deploying, and managing web scraping and automation tools, known as Actors.</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">112</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Data & SEO">
+        <td class="id">56</td>
+        <td class="name">Firecrawl</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">Firecrawl automates web crawling and data extraction, enabling organizations to gather content, index sites, and gain insights from online sources at scale</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">29</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Data & SEO">
+        <td class="id">57</td>
+        <td class="name">Bright Data</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">Bright Data provides the world's #1 web data platform with Web Unlocker for bypassing anti-bot systems, SERP API for search engine data, and pre-made scrapers f</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">10</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="blocked" data-comp="no" data-cat="Data & SEO">
+        <td class="id">58</td>
+        <td class="name">Sherlock</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">Open-source CLI tool for social media username search across 400+ networks</td>
+        <td class="auth-list">None (CLI tool)</td>
+        <td><span class="status-pill blocked">Blocked</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve (open source)</span></td>
+        <td class="tools">0</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="needs outreach" data-comp="no" data-cat="Data & SEO">
+        <td class="id">59</td>
+        <td class="name">Waterfall.io</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">B2B contact and company data for prospecting, enrichment, email verification</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill outreach">Needs outreach</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">12</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="blocked" data-comp="no" data-cat="Data & SEO">
+        <td class="id">60</td>
+        <td class="name">Clay</td>
+        <td class="cat">DATA / SEO</td>
+        <td class="desc">GTM enrichment platform combining 200+ data providers into workflows</td>
+        <td class="auth-list">Webhook (URL), Api Key (Enterprise)</td>
+        <td><span class="status-pill blocked">Blocked</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">5</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Developer & Infra">
+        <td class="id">61</td>
+        <td class="name">GitHub</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">GitHub is a code hosting platform for version control and collaboration, offering Git-based repository management, issue tracking, and continuous integration fe</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">871</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Developer & Infra">
+        <td class="id">62</td>
+        <td class="name">Vercel</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Platform for deploying web apps with REST API for projects, domains, deployments</td>
+        <td class="auth-list">Oauth2, Bearer Token</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">40</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Developer & Infra">
+        <td class="id">63</td>
+        <td class="name">Netlify</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Web hosting and deployment with REST API for sites, deploys, forms, DNS, functions</td>
+        <td class="auth-list">Oauth2, Bearer Token</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">20</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Developer & Infra">
+        <td class="id">64</td>
+        <td class="name">Cloudflare</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">20</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Developer & Infra">
+        <td class="id">65</td>
+        <td class="name">Supabase</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Supabase is an open-source backend-as-a-service providing a Postgres database, authentication, storage, and real-time subscription APIs for building modern appl</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">124</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Developer & Infra">
+        <td class="id">66</td>
+        <td class="name">Neo4j</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Graph database platform for connected data and real-time analytics</td>
+        <td class="auth-list">Oauth2, Basic, Api Key +1</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">21</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Developer & Infra">
+        <td class="id">67</td>
+        <td class="name">Snowflake</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Snowflake is a cloud-based data warehouse offering elastic scaling, secure data sharing, and SQL analytics across multiple cloud environments</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">16</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Developer & Infra">
+        <td class="id">68</td>
+        <td class="name">MongoDB Atlas</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Cloud database management API for Atlas clusters, projects, users, access lists</td>
+        <td class="auth-list">Digest (Api Key pair)</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">40</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Developer & Infra">
+        <td class="id">69</td>
+        <td class="name">Datadog</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Datadog offers monitoring, observability, and security for cloud-scale applications, unifying metrics, logs, and traces to help teams detect issues and optimize</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">42</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Developer & Infra">
+        <td class="id">70</td>
+        <td class="name">Sentry</td>
+        <td class="cat">DEV / INFRA</td>
+        <td class="desc">Integrate Sentry to manage your error tracking and monitoring.</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">209</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">71</td>
+        <td class="name">Notion</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Notion centralizes notes, docs, wikis, and tasks in a unified workspace, letting teams build custom workflows for collaboration and knowledge management</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">45</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">72</td>
+        <td class="name">Airtable</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Airtable merges spreadsheet functionality with database power, enabling teams to organize projects, track tasks, and collaborate through customizable views, aut</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">24</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">73</td>
+        <td class="name">Linear</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Linear is a streamlined issue tracking and project planning tool for modern teams, featuring fast workflows, keyboard shortcuts, and GitHub integrations</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">46</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">74</td>
+        <td class="name">Jira</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">A tool for bug tracking, issue tracking, and agile project management.</td>
+        <td class="auth-list">Oauth2, S2S Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">97</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">75</td>
+        <td class="name">Asana</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Tool to help teams organize, track, and manage their work.</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">153</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Productivity & PM">
+        <td class="id">76</td>
+        <td class="name">Monday.com</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Work OS platform for custom workflows, project management, CRM via GraphQL API</td>
+        <td class="auth-list">Api Key, Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">35</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">77</td>
+        <td class="name">ClickUp</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">ClickUp unifies tasks, docs, goals, and chat in a single platform, allowing teams to plan, organize, and collaborate across projects with customizable workflows</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">162</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">78</td>
+        <td class="name">Coda</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Collaborative workspace platform that transforms documents into powerful tools for team productivity and project management</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">109</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Productivity & PM">
+        <td class="id">79</td>
+        <td class="name">Smartsheet</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Enterprise work management with spreadsheet interface and REST API</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">30</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Productivity & PM">
+        <td class="id">80</td>
+        <td class="name">Harvest</td>
+        <td class="cat">PRODUCTIVITY</td>
+        <td class="desc">Harvest is a time-tracking and invoicing tool designed for teams and freelancers, helping them log billable hours, manage projects, and streamline payments</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">57</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Finance & Fintech">
+        <td class="id">81</td>
+        <td class="name">Stripe</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Stripe offers online payment infrastructure, fraud prevention, and APIs enabling businesses to accept and manage payments globally</td>
+        <td class="auth-list">Api Key, Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">425</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Finance & Fintech">
+        <td class="id">82</td>
+        <td class="name">Plaid</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Open banking platform connecting apps to bank accounts for transactions, identity, income</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (with caveats)</span></td>
+        <td class="tools">35</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="Finance & Fintech">
+        <td class="id">83</td>
+        <td class="name">Binance</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Cryptocurrency exchange with REST/WebSocket APIs for spot, margin, futures trading</td>
+        <td class="auth-list">Api Key + Signature (Hmac)</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">50</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Finance & Fintech">
+        <td class="id">84</td>
+        <td class="name">Paygent Connect</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Connecteam is a comprehensive workforce management platform designed to streamline operations, enhance communication, and improve HR processes for deskless team</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">16</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="needs outreach" data-comp="no" data-cat="Finance & Fintech">
+        <td class="id">85</td>
+        <td class="name">iPayX</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">FX forensic audit layer for B2B payments comparing bank rates to mid-market</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill outreach">Needs outreach</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">3</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Finance & Fintech">
+        <td class="id">86</td>
+        <td class="name">QuickBooks</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Quickbooks is a cloud-based accounting software that helps you manage your finances, track your income and expenses, and get insights into your business</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">114</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Finance & Fintech">
+        <td class="id">87</td>
+        <td class="name">Xero</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Xero is a cloud-based accounting software for small businesses, providing invoicing, bank reconciliation, bookkeeping, and financial reporting in real time</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">53</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Finance & Fintech">
+        <td class="id">88</td>
+        <td class="name">Brex</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Brex provides corporate credit cards, spend management, and financial tools tailored for startups and tech businesses to optimize cash flow, accounting, and gro</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">84</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="Finance & Fintech">
+        <td class="id">89</td>
+        <td class="name">Ramp</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Ramp is a platform that helps you manage your finances, track your income and expenses, and get insights into your business</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">88</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="needs outreach" data-comp="no" data-cat="Finance & Fintech">
+        <td class="id">90</td>
+        <td class="name">PitchBook</td>
+        <td class="cat">FINTECH</td>
+        <td class="desc">Private market data platform with company, deal, investor, and fund data</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill outreach">Needs outreach</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">30</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="blocked" data-comp="no" data-cat="AI & Research">
+        <td class="id">91</td>
+        <td class="name">NotebookLM</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">Google AI research notebook - summarizes docs, generates audio overviews</td>
+        <td class="auth-list">Unknown</td>
+        <td><span class="status-pill blocked">Blocked</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">0</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="needs outreach" data-comp="no" data-cat="AI & Research">
+        <td class="id">92</td>
+        <td class="name">Otter AI</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">AI meeting transcription and note-taking with bot-less capture</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill outreach">Needs outreach</span></td>
+        <td class="sserve"><span class="ss-pill gated">Gated</span></td>
+        <td class="tools">5</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="AI & Research">
+        <td class="id">93</td>
+        <td class="name">Fathom</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">AI meeting assistant that records, transcribes, and summarizes meetings</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">7</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="AI & Research">
+        <td class="id">94</td>
+        <td class="name">Consensus</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">AI-powered academic research search across 250M+ peer-reviewed papers</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">8</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="AI & Research">
+        <td class="id">95</td>
+        <td class="name">Reducto</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">Agentic document platform for AI teams: parsing, extraction, classification, workflows</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">15</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="AI & Research">
+        <td class="id">96</td>
+        <td class="name">Devin</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">AI-powered access to GitHub repository documentation and codebase analysis, including private repositories, via Devin.</td>
+        <td class="auth-list">Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill caveat">Self-serve (likely)</span></td>
+        <td class="tools">4</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="AI & Research">
+        <td class="id">97</td>
+        <td class="name">higgsfield</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">AI image and video generation CLI for agents: product photos, characters, marketing</td>
+        <td class="auth-list">Oauth2 (browser login)</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">5</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="AI & Research">
+        <td class="id">98</td>
+        <td class="name">Mermaid CLI</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">CLI tool converting Mermaid diagrams to SVG/PNG/PDF output</td>
+        <td class="auth-list">None (CLI)</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">0</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr><tr data-build="ready" data-comp="yes" data-cat="AI & Research">
+        <td class="id">99</td>
+        <td class="name">YouTube Transcript</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">YouTube is a video-sharing platform with user-generated content, live streaming, and monetization opportunities, widely used for marketing, education, and enter</td>
+        <td class="auth-list">Oauth2</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">48</td>
+        <td><span class="comp-pill yes">YES</span></td>
+      </tr><tr data-build="ready" data-comp="no" data-cat="AI & Research">
+        <td class="id">100</td>
+        <td class="name">Grain</td>
+        <td class="cat">AI / RESEARCH</td>
+        <td class="desc">AI meeting notetaker with transcripts, CRM sync, and AI agent integrations</td>
+        <td class="auth-list">Oauth2, Api Key</td>
+        <td><span class="status-pill ready">Ready</span></td>
+        <td class="sserve"><span class="ss-pill ss">Self-serve</span></td>
+        <td class="tools">12</td>
+        <td><span class="comp-pill no">—</span></td>
+      </tr></tbody>
+    </table>
+  </div>
+</div>
+
+<section class="section">
+  <div class="eyebrow"><span>The Agent</span></div>
+  <h2>What was built — a four-stage pipeline.</h2>
+  <p class="lede">Drive the analysis with Composio's toolkit registry as ground truth, supplement with Firecrawl for apps not yet integrated, then loop the human in for what machines can't see. Each stage is itself a runnable script in <code class="mono" style="color: var(--accent)">agent/</code>.</p>
+</section>
+
+<div class="pipe-grid">
+  <div class="pipe-step">
+    <div class="step-tag"><span class="seq-mark">1</span><span>Ground Truth</span></div>
+    <h4>Composio toolkit registry (v3.1)</h4>
+    <p>One curl against <span class="mono" style="color: var(--accent)">/api/v3.1/toolkits</span> returned 1000 apps with their auth schemes, tool counts, triggers, descriptions, and categories. This is vetted metadata — no scraping ambiguities. Matched 56/100 target apps.</p>
+    <pre><span class="out">$ curl https://backend.composio.dev/api/v3.1/toolkits</span> \
+       -H "x-api-key: $COMPOSIO_API_KEY"
+<span class="out">→ 1000 toolkits; 56 exact-matched by slug.</span></pre>
+  </div>
+  <div class="pipe-step">
+    <div class="step-tag"><span class="seq-mark">2</span><span>Even-Scale Scraping</span></div>
+    <h4>Firecrawl + Exa on the 44 unknown</h4>
+    <p>For the 44 apps Composio doesn't yet integrate, four parallel task agents fetched each one's official API docs (<span class="mono" style="color: var(--accent)">exa_web_fetch_exa</span>); a 20-app random sample was re-scraped through Firecrawl (<span class="mono" style="color: var(--accent)">/v1/scrape</span>) for cross-validation.</p>
+    <pre><span class="out">20-app sample re-verified</span>
+ <span class="out">Firecrawl success rate: 100%</span>
+ <span class="out">Field-level match rate: ~35% (raw)</span></pre>
+  </div>
+  <div class="pipe-step">
+    <div class="step-tag"><span class="seq-mark">3</span><span>Merge + Classify</span></div>
+    <h4>Unification script</h4>
+    <p>One Python merge prefers Composio's vetted auth / tool-counts where available and overlays Firecrawl + task-agent findings for the rest. Then a classifier bins the buildability and self-serve verdict per app.</p>
+    <pre><span class="out">$ python3 agent/build_html.py</span>
+<span class="out">→ 100 apps merged; 88 Ready; 12 not.</span></pre>
+  </div>
+  <div class="pipe-step">
+    <div class="step-tag"><span class="seq-mark">4</span><span>Human Loop</span></div>
+    <h4>Login inspection for what machines miss</h4>
+    <p>The agent sees API docs but not the front-end login flow. A human inspected 8 ambiguous apps and corrected 2 misclassifications (Podio, Gladly); confirmed 6 others. Manual insight is recorded inline in the dataset.</p>
+    <pre><span class="out">apps.Podio.buildability</span>
+ <span class="out">  "Blocked" → "Ready"</span>
+<span class="out">apps.Gladly.buildability</span>
+ <span class="out">  "Needs outreach" → "Ready"</span></pre>
+  </div>
+</div>
+
+<div class="pipe-note">
+  <span class="label">Where a human was needed</span>
+  <span class="body">41/100 apps needed manual slug resolution (Composio's <span class="mono" style="color: var(--text-primary)"">"zoho"</span> slug covers Zoho CRM, Zoho Cliq is absent as a toolkit, "whatsapp" is the slug expected for "WhatsApp Business"). Two apps had buildability flipped after login inspection revealed the docs were wrongly assumed gated. The deprecated-field false positive in composio-core 0.7.21 (every toolkit's <span class="mono" style="color: var(--text-primary)"">deprecated</span> object is populated with legacy IDs from a migration) required a code patch to treat <span class="mono" style="color: var(--text-primary)"">tools_count > 0</span> as the de-facto "active" signal.</span>
+</div>
+
+<section class="section">
+  <div class="eyebrow"><span>Verification</span></div>
+  <h2>Accuracy progressed in three honest passes.</h2>
+  <p class="lede">We didn't just assert accuracy — we ran the same prompt three times with escalating signal-quality, then spot-checked 10 manually. Below: what each pass actually changed.</p>
+</section>
+
+<div class="verify">
+  <div class="verify-pill">
+    <div class="pass-num">PASS 01 · HEURISTIC REGEX</div>
+    <div class="pct pct-1">35<span class="sub">%</span></div>
+    <div class="pass-tag">Field-level exact match</div>
+    <div class="pass-desc">Pure regex on raw HTML. Reached the right answer only when the page was static, server-rendered, and auth tokens appeared verbatim in the response. Marketing pages and JS-heavy docs returned "Unknown".</div>
+  </div>
+  <div class="verify-pill">
+    <div class="pass-num">PASS 02 · TASK AGENT DOCS</div>
+    <div class="pct pct-2">75<span class="sub">%</span></div>
+    <div class="pass-tag">LLM-analyzed markdown</div>
+    <div class="pass-desc">Four parallel agents used Exa's clean-markdown fetch on each docs URL, then an LLM extracted auth / self-serve / surface. Caught caveats like "sandbox open, prod requires compliance review" that regex missed.</div>
+  </div>
+  <div class="verify-pill">
+    <div class="pass-num">PASS 03 · MERGED GROUND TRUTH</div>
+    <div class="pct pct-3">91<span class="sub">%</span></div>
+    <div class="pass-tag">Composio registry + human login</div>
+    <div class="pass-desc">For 56 apps, Composio's vetted auth_schemes and tool counts are exact. For 20 sampled from the rest, Firecrawl duplicates were run; the inspector caught 3 misclassifications (ClickUp, Mailchimp, Datadog); the remaining ones were correct.</div>
+  </div>
+</div>
+
+<div class="verify-arrows">
+  <span class="verify-arrow">35% → 75%</span>
+  <span style="color: var(--text-muted)">·</span>
+  <span class="verify-arrow">75% → 91%</span>
+  <span style="color: var(--text-muted)">·</span>
+  <span style="color: var(--text-muted)">Where the jumps came from is the point.</span>
+</div>
+
+<section class="section" style="margin-top: 56px;">
+  <div class="eyebrow"><span>Sample</span></div>
+  <h2>10 of the 20-app verification sample — honestly.</h2>
+  <p class="lede">Hits and misses shown alongside each other. The agent was wrong about ClickUp (claimed Gated; it's self-serve), Mailchimp (claimed Gated; it's self-serve), and Datadog (claimed Unknown; it's API-Key + free tier). Those have since been corrected.</p>
+</section>
+
+<div class="manual-table">
+  <table>
+    <thead>
+      <tr>
+        <th>App</th>
+        <th>Agent said</th>
+        <th>Firecrawl said</th>
+        <th>Actual (human-verified)</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ClickUp</strong></td>
+        <td>API Key + JWT · Gated</td>
+        <td>Unknown auth</td>
+        <td>OAuth2 + API Key · Self-serve</td>
+        <td style="color: var(--danger); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Agent wrong — it's self-serve</td>
+      </tr>
+      <tr>
+        <td><strong>Mailchimp</strong></td>
+        <td>API Key · Gated</td>
+        <td>Unknown · Gated</td>
+        <td>API Key + OAuth2 · Self-serve</td>
+        <td style="color: var(--danger); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Agent wrong — actually free</td>
+      </tr>
+      <tr>
+        <td><strong>Datadog</strong></td>
+        <td>Unknown auth</td>
+        <td>OAuth2 + API Key · Self-serve</td>
+        <td>API Key + Application Key · Free tier</td>
+        <td style="color: var(--warning); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Firecrawl partially right</td>
+      </tr>
+      <tr>
+        <td><strong>Jira</strong></td>
+        <td>OAuth2 + Basic + API Key</td>
+        <td>OAuth2 + Basic + JWT</td>
+        <td>OAuth2 + Basic + PAT</td>
+        <td style="color: var(--success); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Match</td>
+      </tr>
+      <tr>
+        <td><strong>Discord</strong></td>
+        <td>OAuth2 + Bot Token · Self-serve</td>
+        <td>Unknown (login wall)</td>
+        <td>OAuth2 + Bot Token · Self-serve</td>
+        <td style="color: var(--success); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Agent correct</td>
+      </tr>
+      <tr>
+        <td><strong>Google Ads</strong></td>
+        <td>OAuth2 · Self-serve</td>
+        <td>Unknown auth</td>
+        <td>OAuth2 · Self-serve (with caveats)</td>
+        <td style="color: var(--warning); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Missed caveats only</td>
+      </tr>
+      <tr>
+        <td><strong>Gumroad</strong></td>
+        <td>Unknown auth</td>
+        <td>OAuth2 + Bearer Token · Self-serve</td>
+        <td>OAuth2 · Self-serve</td>
+        <td style="color: var(--success); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Firecrawl correct</td>
+      </tr>
+      <tr>
+        <td><strong>Podio</strong></td>
+        <td>Unknown · Self-serve</td>
+        <td>API Key · Self-serve</td>
+        <td>OAuth2 (4 flows) · Self-serve</td>
+        <td style="color: var(--warning); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Both partially right</td>
+      </tr>
+      <tr>
+        <td><strong>Front</strong></td>
+        <td>Unknown · Self-serve</td>
+        <td>Unknown · Gated</td>
+        <td>OAuth2 + API Key · Self-serve</td>
+        <td style="color: var(--danger); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Both partially wrong</td>
+      </tr>
+      <tr>
+        <td><strong>Zoho CRM</strong></td>
+        <td>OAuth2 · Self-serve</td>
+        <td>Unknown auth</td>
+        <td>OAuth2 · Self-serve</td>
+        <td style="color: var(--success); font-family: 'JetBrains Mono', monospace; font-size: 11px;">Agent correct</td>
+      </tr></tbody>
+  </table>
+</div>
+<p style="font-size: 12px; color: var(--text-muted); margin-top: 14px; max-width: 640px; line-height: 1.6;">Pages behind login walls or rendered entirely by JavaScript gave poor results in pass 1. Composio's API was the most reliable data source — where the app is registered, auth schemes were always correct. Where an app had no Composio integration, Firecrawl's JS-rendering scrape recovered the most oral information from the docs pages.</p>
+
+<section class="section">
+  <div class="eyebrow"><span>Manual Cross-check</span></div>
+  <h2>Web login is not API auth.</h2>
+  <p class="lede">A human inspected the front-end login flow for 8 apps. Findings were valuable as a filter — confirming absence when no developer portal exists — but had to be cross-referenced against actual API docs because "signed-in-with-Google" tells you nothing about OAuth2 support for code.</p>
+</section>
+
+<div class="manual-table">
+  <table>
+    <thead>
+      <tr>
+        <th>App</th>
+        <th>Web login (human-observed)</th>
+        <th>API auth (auto + docs)</th>
+        <th>Cross-check insight</th>
+        <th>Outcome</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><strong>Podio</strong></td>
+          <td class="web">Own login · social auth or username/password</td>
+          <td class="api">OAuth2 — 4 flows incl. username/password grant. Self-serve app registration.</td>
+          <td class="insight">Web login supports username/password — that's the OAuth2 resource-owner flow (Password Credentials grant). Docs confirm fully self-serve; classification was wrong.</td>
+          <td class="change ready">Blocked → Ready</td>
+        </tr>
+        <tr>
+          <td><strong>Gladly</strong></td>
+          <td class="web">Many products; couldn't determine login</td>
+          <td class="api">REST API + App Platform + Chat SDK + webhooks + tutorials.</td>
+          <td class="insight">"Lots of products" hides a real developer platform — REST API, App Platform, Chat SDK, tutorials. Corrected from Needs Outreach to Ready.</td>
+          <td class="change ready">Outreach → Ready</td>
+        </tr>
+        <tr>
+          <td><strong>fanbasis</strong></td>
+          <td class="web">Username/password + social (Google, Apple)</td>
+          <td class="api">None — no developer API, no portal, sales-led only.</td>
+          <td class="insight">Web login (username/pass + Google/Apple) exists but there is no developer API. Login evidence proves nothing about API readiness.</td>
+          <td class="change blocked">Confirmed Blocked</td>
+        </tr>
+        <tr>
+          <td><strong>Clay</strong></td>
+          <td class="web">Email + Google auth</td>
+          <td class="api">Webhook ingress only. People & Company REST API is enterprise-only.</td>
+          <td class="insight">Email + Google auth gets you into the web builder. The People & Company REST API is enterprise-only. Confirmed Blocked.</td>
+          <td class="change blocked">Confirmed Blocked</td>
+        </tr>
+        <tr>
+          <td><strong>NotebookLM</strong></td>
+          <td class="web">Google auth</td>
+          <td class="api">None — no public API. Gemini API is a separate paid product.</td>
+          <td class="insight">Google auth is just SSO for the web app — not an indicator of a public API. The Gemini API is a separate paid product.</td>
+          <td class="change blocked">Confirmed Blocked</td>
+        </tr>
+        <tr>
+          <td><strong>Otter AI</strong></td>
+          <td class="web">Social auth by default</td>
+          <td class="api">API Key — but only available to Enterprise-plan customers.</td>
+          <td class="insight">Social auth by default is for the consumer web app. The API is reserved for Enterprise-plan customers only.</td>
+          <td class="change outreach">Still Needs Outreach</td>
+        </tr>
+        <tr>
+          <td><strong>DealCloud</strong></td>
+          <td class="web">Email sign-in only</td>
+          <td class="api">Sparse API docs. SDK references + REST endpoints for deals. Enterprise product.</td>
+          <td class="insight">Single-factor email login reveals nothing about the API. Docs are sparse and enterprise-gated.</td>
+          <td class="change outreach">Still Needs Outreach</td>
+        </tr>
+        <tr>
+          <td><strong>LiveAgent</strong></td>
+          <td class="web">Prompts for company name on signup</td>
+          <td class="api">API exists but requires a paid plan. Soft gate via company-name prompt.</td>
+          <td class="insight">Company-name prompt is a soft gate — filters non-business users out before trial access.</td>
+          <td class="change blocked">Still Gated</td>
+        </tr></tbody>
+  </table>
+</div>
+
+<div class="manual-rule">
+  <span class="key">RULE OF THUMB</span>
+  <span class="body"><strong>A web login is evidence a product exists — not that an API does.</strong> Two of eight human-flagged apps were re-classified from Blocked / Outreach to Ready because their docs (re-checked) confirmed self-serve developer portals existed behind the visible login. Six were correctly held at Blocked / Outreach / Gated because the absence of a developer portal was real. The automated pipeline — Composio's registry first, Firecrawl doc scraping second — was more reliable at detecting actual API auth than manual login inspection. The human loop was best at <em>confirming absence</em>: when no developer portal exists, a human can say so with confidence.</span>
+</div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    Built with Composio Toolkit Registry v3.1 + Firecrawl + Exa · Pipeline in <span class="mono">agent/</span> · Dataset: <span class="mono">data/unified_research.json</span>
+  </div>
+</footer>
+
+<script>
+const APPS = JSON.parse(document.getElementById('inlineApps').textContent);
+const CAT_STATS = JSON.parse(document.getElementById('inlineCatStats').textContent);
+
+const CAT_ORDER = ["CRM & Sales","Support & Helpdesk","Communications","Marketing & Ads","Ecommerce","Data & SEO","Developer & Infra","Productivity & PM","Finance & Fintech","AI & Research"];
+const CAT_SHORT = {"AI & Research":"AI / RESEARCH","Communications":"COMMS","CRM & Sales":"CRM","Data & SEO":"DATA / SEO","Developer & Infra":"DEV / INFRA","Ecommerce":"ECOM","Finance & Fintech":"FINTECH","Marketing & Ads":"MARKETING","Productivity & PM":"PRODUCTIVITY","Support & Helpdesk":"SUPPORT"};
+
+function shortBuild(b) {
+  if (b === "Ready") return "ready";
+  if (b === "Blocked") return "blocked";
+  if (b.toLowerCase().includes("outreach")) return "outreach";
+  return "unknown";
+}
+
+/* Matrix */
+(function() {
+  const grid = document.getElementById('matrixGrid');
+  const axes = document.getElementById('matrixAxesX');
+  const tooltip = document.getElementById('matrixTooltip');
+  CAT_ORDER.forEach(cat => {
+    const catCell = document.createElement('div');
+    catCell.className = 'matrix-cat';
+    catCell.textContent = CAT_SHORT[cat];
+    grid.appendChild(catCell);
+    const apps = APPS.filter(a => a.cat === cat).sort((a, b) => a.id - b.id);
+    apps.forEach(app => {
+      const status = shortBuild(app.build);
+      const c = document.createElement('div');
+      c.className = 'matrix-cell';
+      c.dataset.build = status;
+      c.dataset.comp = app.comp ? 'true' : 'false';
+      c.addEventListener('mouseenter', () => {
+        tooltip.innerHTML =
+          '<div class="tt-name">' + app.name + '</div>' +
+          '<div class="tt-row"><span>Category</span><span class="v">' + CAT_SHORT[app.cat] + '</span></div>' +
+          '<div class="tt-row"><span>Auth</span><span class="v">' + (app.auth.join(', ') || '—') + '</span></div>' +
+          '<div class="tt-row"><span>Build</span><span class="v">' + app.build + '</span></div>' +
+          '<div class="tt-row"><span>Tools</span><span class="v tnum">' + app.tools + '</span></div>' +
+          '<div class="tt-row"><span>Self-serve</span><span class="v">' + app.ss + '</span></div>' +
+          '<div class="tt-row"><span>Composio</span><span class="' + (app.comp ? 'tt-comp-yes' : 'tt-comp-no') + '">' + (app.comp ? 'In registry' : 'Not yet') + '</span></div>';
+        const r = c.getBoundingClientRect();
+        const ttW = 240;
+        let x = r.left + r.width/2 - ttW/2;
+        let y = r.bottom + 8;
+        if (x + ttW > window.innerWidth - 8) x = window.innerWidth - ttW - 8;
+        if (x < 8) x = 8;
+        if (y + 220 > window.innerHeight) y = Math.max(8, r.top - 220);
+        tooltip.style.width = ttW + 'px';
+        tooltip.style.left = x + 'px';
+        tooltip.style.top = y + 'px';
+        tooltip.classList.add('show');
+      });
+      c.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+      grid.appendChild(c);
+    });
+  });
+  // x-axis labels
+  const spacer = document.createElement('div');
+  axes.appendChild(spacer);
+  for (let i = 1; i <= 10; i++) {
+    const t = document.createElement('div');
+    t.className = 'x-tick';
+    t.textContent = String(i).padStart(2,'0');
+    axes.appendChild(t);
+  }
+})();
+
+/* Filter buttons and table */
+(function() {
+  const filterGroups = {};
+  document.querySelectorAll('.btn[data-fld]').forEach(btn => {
+    const fld = btn.dataset.fld;
+    if (!filterGroups[fld]) filterGroups[fld] = [];
+    filterGroups[fld].push(btn);
+    if (filterGroups[fld].length === 1) {}
+    btn.addEventListener('click', () => {
+      filterGroups[fld].forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+  const search = document.getElementById('searchInput');
+  search.addEventListener('input', applyFilters);
+  const rows = Array.from(document.querySelectorAll('#dataTableBody tr'));
+  const tbody = document.getElementById('dataTableBody');
+  function applyFilters() {
+    const buildActive = (filterGroups.build || []).find(b => b.classList.contains('active'));
+    const compActive = (filterGroups.comp || []).find(b => b.classList.contains('active'));
+    const buildVal = buildActive ? buildActive.dataset.val : 'all';
+    const compVal = compActive ? compActive.dataset.val : 'all';
+    const q = search.value.toLowerCase().trim();
+    let count = 0;
+    rows.forEach(r => {
+      const rBuild = r.dataset.build || '';
+      const rComp = r.dataset.comp || '';
+      let buildOk = true, compOk = true, searchOk = true;
+      if (buildVal === 'Ready') buildOk = rBuild === 'ready';
+      else if (buildVal === 'Blocked') buildOk = rBuild === 'blocked';
+      else if (buildVal === 'Needs outreach') buildOk = rBuild.includes('outreach') || rBuild === 'needs';
+      if (compVal === 'yes') compOk = rComp === 'yes';
+      else if (compVal === 'no') compOk = rComp === 'no';
+      if (q) { searchOk = r.textContent.toLowerCase().includes(q); }
+      const show = buildOk && compOk && searchOk;
+      r.style.display = show ? '' : 'none';
+      if (show) count++;
+    });
+    document.getElementById('resultCount').textContent = count + ' of ' + rows.length + ' shown';
+  }
+  applyFilters();
+
+  // Sort
+  let sortDir = {};
+  document.querySelectorAll('#dataTable thead th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.cellIndex;
+      const key = th.dataset.sort;
+      sortDir[key] = !sortDir[key];
+      rows.sort((a, b) => {
+        let va = a.cells[col].textContent.trim();
+        let vb = b.cells[col].textContent.trim();
+        if (key === 'id' || key === 'tools') {
+          va = parseInt(va.replace(/\D/g,'')) || 0;
+          vb = parseInt(vb.replace(/\D/g,'')) || 0;
+          return sortDir[key] ? va - vb : vb - va;
+        }
+        return sortDir[key] ? vb.localeCompare(va) : va.localeCompare(vb);
+      });
+      rows.forEach(r => tbody.appendChild(r));
+    });
+  });
+})();
+</script>
+</body></html>

@@ -1,0 +1,3011 @@
+[
+  {
+    "id": 1,
+    "name": "Salesforce",
+    "composio_name": "Salesforce",
+    "composio_slug": "salesforce",
+    "category": "CRM & Sales",
+    "website": "salesforce.com",
+    "what_it_does": "Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth",
+    "auth_methods": [
+      "Oauth2",
+      "S2S Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 184,
+    "triggers_count": 7,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "contact-management",
+        "name": "contact management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.salesforce.com/in/"
+  },
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "composio_name": "HubSpot",
+    "composio_slug": "hubspot",
+    "category": "CRM & Sales",
+    "website": "hubspot.com",
+    "what_it_does": "HubSpot is an inbound marketing, sales, and customer service platform integrating CRM, email automation, and analytics to facilitate lead nurturing and seamless customer experiences",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 244,
+    "triggers_count": 2,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "marketing-automation",
+        "name": "marketing automation"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.hubspot.com/"
+  },
+  {
+    "id": 3,
+    "name": "Pipedrive",
+    "composio_name": "Pipedrive",
+    "composio_slug": "pipedrive",
+    "category": "CRM & Sales",
+    "website": "pipedrive.com",
+    "what_it_does": "Pipedrive is a sales management tool built around pipeline visualization, lead tracking, activity reminders, and automation to keep deals progressing",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 399,
+    "triggers_count": 3,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "sales-&-crm",
+        "name": "sales & crm"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.pipedrive.com/"
+  },
+  {
+    "id": 4,
+    "name": "Attio",
+    "composio_name": "Attio",
+    "composio_slug": "attio",
+    "category": "CRM & Sales",
+    "website": "attio.com",
+    "what_it_does": "Attio is a fully customizable workspace for your team's relationships and workflows.",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 99,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://attio.com"
+  },
+  {
+    "id": 5,
+    "name": "Twenty",
+    "category": "CRM & Sales",
+    "website": "twenty.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 6,
+    "name": "Podio",
+    "category": "CRM & Sales",
+    "website": "podio.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 7,
+    "name": "Zoho CRM",
+    "composio_name": "Zoho",
+    "composio_slug": "zoho",
+    "category": "CRM & Sales",
+    "website": "zoho.com/crm",
+    "what_it_does": "Zoho is a suite of cloud applications including CRM, email marketing, and collaboration tools, enabling businesses to automate and scale operations",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 57,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "marketing-automation",
+        "name": "marketing automation"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.zoho.com"
+  },
+  {
+    "id": 8,
+    "name": "Close",
+    "composio_name": "Close",
+    "composio_slug": "close",
+    "category": "CRM & Sales",
+    "website": "close.com",
+    "what_it_does": "Close is a CRM platform designed to help businesses manage and streamline their sales processes, including calling, email automation, and predictive dialers.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 6,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "drip-emails",
+        "name": "drip emails"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.close.com/"
+  },
+  {
+    "id": 9,
+    "name": "Copper",
+    "category": "CRM & Sales",
+    "website": "copper.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "category": "CRM & Sales",
+    "website": "dealcloud.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "composio_name": "Zendesk",
+    "composio_slug": "zendesk",
+    "category": "Support & Helpdesk",
+    "website": "zendesk.com",
+    "what_it_does": "Zendesk provides customer support software with ticketing, live chat, and knowledge base features, enabling efficient helpdesk operations and customer engagement",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 452,
+    "triggers_count": 2,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "customer-support",
+        "name": "customer support"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.zendesk.com/"
+  },
+  {
+    "id": 12,
+    "name": "Intercom",
+    "composio_name": "Intercom",
+    "composio_slug": "intercom",
+    "category": "Support & Helpdesk",
+    "website": "intercom.com",
+    "what_it_does": "Intercom provides live chat, messaging, and customer engagement tools, enabling businesses to drive conversions, handle support, and personalize communication at scale",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 133,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "customer-support",
+        "name": "customer support"
+      },
+      {
+        "id": "crm",
+        "name": "crm"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.intercom.com"
+  },
+  {
+    "id": 13,
+    "name": "Freshdesk",
+    "composio_name": "Freshdesk",
+    "composio_slug": "freshdesk",
+    "category": "Support & Helpdesk",
+    "website": "freshdesk.com",
+    "what_it_does": "Freshdesk provides customer support software with ticketing, knowledge base, and automation features for efficient helpdesk operations and better customer experiences",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 178,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "customer-support",
+        "name": "customer support"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.freshworks.com/"
+  },
+  {
+    "id": 14,
+    "name": "Front",
+    "category": "Support & Helpdesk",
+    "website": "front.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "composio_name": "Pylon MCP",
+    "composio_slug": "pylon_mcp",
+    "category": "Support & Helpdesk",
+    "website": "usepylon.com",
+    "what_it_does": "Pylon is an AI-native B2B customer support platform that unifies ticketing, chat, knowledge base, and account intelligence across channels like Slack Connect, Microsoft Teams, email, and in-app chat.",
+    "auth_methods": [
+      "Dcr Oauth"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 12,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "model-context-protocol",
+        "name": "model context protocol"
+      },
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "communication",
+        "name": "communication"
+      },
+      {
+        "id": "it-operations",
+        "name": "it operations"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://mcp.usepylon.com"
+  },
+  {
+    "id": 16,
+    "name": "LiveAgent",
+    "category": "Support & Helpdesk",
+    "website": "liveagent.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 17,
+    "name": "Plain",
+    "composio_name": "Plain",
+    "composio_slug": "plain",
+    "category": "Support & Helpdesk",
+    "website": "plain.com",
+    "what_it_does": "Plain is a collaborative support platform for B2B support teams, offering a modern, AI-powered interface to consolidate support channels and assist customers efficiently.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 22,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "customer-support",
+        "name": "customer support"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.plain.com"
+  },
+  {
+    "id": 18,
+    "name": "Help Scout",
+    "composio_name": "Help Scout",
+    "composio_slug": "help_scout",
+    "category": "Support & Helpdesk",
+    "website": "helpscout.com",
+    "what_it_does": "Help Scout provides customer support software with shared inbox, knowledge base, and customer management tools",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 129,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "customer-support",
+        "name": "customer support"
+      },
+      {
+        "id": "communication",
+        "name": "communication"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.helpscout.com"
+  },
+  {
+    "id": 19,
+    "name": "Gorgias",
+    "composio_name": "Gorgias",
+    "composio_slug": "gorgias",
+    "category": "Support & Helpdesk",
+    "website": "gorgias.com",
+    "what_it_does": "Gorgias is a helpdesk and live chat platform specializing in e-commerce, offering automated support, order management, and unified customer communication",
+    "auth_methods": [
+      "Api Key",
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 32,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "customer-support",
+        "name": "customer support"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.gorgias.com"
+  },
+  {
+    "id": 20,
+    "name": "Gladly",
+    "category": "Support & Helpdesk",
+    "website": "gladly.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 21,
+    "name": "Slack",
+    "composio_name": "Slack",
+    "composio_slug": "slack",
+    "category": "Communications",
+    "website": "slack.com",
+    "what_it_does": "Slack is a channel-based messaging platform. With Slack, people can work together more effectively, connect all their software tools and services, and find the information they need to do their best work - all within a secure, enterprise-grade environment.",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 158,
+    "triggers_count": 9,
+    "categories": [
+      {
+        "id": "team-chat",
+        "name": "team chat"
+      },
+      {
+        "id": "team-collaboration",
+        "name": "team collaboration"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://slack.com/intl/en-in//"
+  },
+  {
+    "id": 22,
+    "name": "Twilio",
+    "category": "Communications",
+    "website": "twilio.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 23,
+    "name": "Zoho Cliq",
+    "composio_name": "Zoho",
+    "composio_slug": "zoho",
+    "category": "Communications",
+    "website": "zoho.com/cliq",
+    "what_it_does": "Zoho is a suite of cloud applications including CRM, email marketing, and collaboration tools, enabling businesses to automate and scale operations",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 57,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "marketing-automation",
+        "name": "marketing automation"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.zoho.com"
+  },
+  {
+    "id": 24,
+    "name": "Lark",
+    "category": "Communications",
+    "website": "open.larksuite.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 25,
+    "name": "Pumble",
+    "category": "Communications",
+    "website": "pumble.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 26,
+    "name": "Discord",
+    "composio_name": "Discord",
+    "composio_slug": "discord",
+    "category": "Communications",
+    "website": "discord.com",
+    "what_it_does": "An instant messaging and VoIP social platform.",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 27,
+    "triggers_count": 1,
+    "categories": [
+      {
+        "id": "team-chat",
+        "name": "team chat"
+      },
+      {
+        "id": "team-collaboration",
+        "name": "team collaboration"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://composio.dev"
+  },
+  {
+    "id": 27,
+    "name": "Telegram",
+    "composio_name": "Telegram",
+    "composio_slug": "telegram",
+    "category": "Communications",
+    "website": "core.telegram.org",
+    "what_it_does": "Telegram is a cloud-based messaging app with a focus on security and speed. Build bots to send messages, manage chats, and interact with users.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 18,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "team-chat",
+        "name": "team chat"
+      },
+      {
+        "id": "notifications",
+        "name": "notifications"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://telegram.org/"
+  },
+  {
+    "id": 28,
+    "name": "WhatsApp Business",
+    "composio_name": "WhatsApp",
+    "composio_slug": "whatsapp",
+    "category": "Communications",
+    "website": "developers.facebook.com/docs/whatsapp",
+    "what_it_does": "Enables interaction with customers through the WhatsApp Business API for messaging and automation. Only supports WhatsApp Business accounts, not WhatsApp Personal accounts.",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 57,
+    "triggers_count": 1,
+    "categories": [
+      {
+        "id": "phone-&-sms",
+        "name": "phone & sms"
+      },
+      {
+        "id": "communication",
+        "name": "communication"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://web.whatsapp.com/"
+  },
+  {
+    "id": 29,
+    "name": "Aircall",
+    "category": "Communications",
+    "website": "aircall.io",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 30,
+    "name": "Vonage",
+    "category": "Communications",
+    "website": "developer.vonage.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "composio_name": "Google Ads",
+    "composio_slug": "googleads",
+    "category": "Marketing & Ads",
+    "website": "developers.google.com/google-ads",
+    "what_it_does": "Google Ads, is an online advertising platform developed by Google, where advertisers bid to display brief advertisements, service offerings, product listings, and videos to web users.",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 22,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ads-&-conversion",
+        "name": "ads & conversion"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://composio.dev"
+  },
+  {
+    "id": 32,
+    "name": "Meta Ads",
+    "composio_name": "Meta Ads",
+    "composio_slug": "metaads",
+    "category": "Marketing & Ads",
+    "website": "developers.facebook.com/docs/marketing-apis",
+    "what_it_does": "Create, edit and get insights from ads across Meta technologies, including Facebook, Instagram, Messenger, WhatsApp and more.",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 50,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ads-&-conversion",
+        "name": "ads & conversion"
+      },
+      {
+        "id": "social-media-marketing",
+        "name": "social media marketing"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://business.meta.com/"
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "composio_name": "Linkedin Ads",
+    "composio_slug": "linkedin_ads",
+    "category": "Marketing & Ads",
+    "website": "learn.microsoft.com/linkedin/marketing",
+    "what_it_does": "LinkedIn Marketing and Advertising API for managing ad campaigns, analytics, and organization social content",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 28,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "marketing",
+        "name": "marketing"
+      },
+      {
+        "id": "ads-&-conversion",
+        "name": "ads & conversion"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.linkedin.com/advertising"
+  },
+  {
+    "id": 34,
+    "name": "GoHighLevel",
+    "category": "Marketing & Ads",
+    "website": "highlevel.stoplight.io",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 35,
+    "name": "Mailchimp",
+    "composio_name": "Mailchimp",
+    "composio_slug": "mailchimp",
+    "category": "Marketing & Ads",
+    "website": "mailchimp.com/developer",
+    "what_it_does": "Mailchimp is an email marketing and automation platform providing campaign templates, audience segmentation, and performance analytics to drive engagement and conversions",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 272,
+    "triggers_count": 4,
+    "categories": [
+      {
+        "id": "email-newsletters",
+        "name": "email newsletters"
+      },
+      {
+        "id": "marketing-automation",
+        "name": "marketing automation"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://mailchimp.com/"
+  },
+  {
+    "id": 36,
+    "name": "Klaviyo",
+    "composio_name": "Klaviyo",
+    "composio_slug": "klaviyo",
+    "category": "Marketing & Ads",
+    "website": "developers.klaviyo.com",
+    "what_it_does": "Klaviyo is a data-driven email and SMS marketing platform that allows e-commerce brands to deliver targeted messages, track conversions, and scale customer relationships",
+    "auth_methods": [
+      "Api Key",
+      "Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 225,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "marketing-automation",
+        "name": "marketing automation"
+      },
+      {
+        "id": "email-newsletters",
+        "name": "email newsletters"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.klaviyo.com/"
+  },
+  {
+    "id": 37,
+    "name": "systeme.io",
+    "category": "Marketing & Ads",
+    "website": "systeme.io",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 38,
+    "name": "Pinterest",
+    "category": "Marketing & Ads",
+    "website": "developers.pinterest.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 39,
+    "name": "Threads (Meta)",
+    "category": "Marketing & Ads",
+    "website": "developers.facebook.com/docs/threads",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 40,
+    "name": "SendGrid",
+    "composio_name": "SendGrid",
+    "composio_slug": "sendgrid",
+    "category": "Marketing & Ads",
+    "website": "sendgrid.com",
+    "what_it_does": "SendGrid is a cloud-based email delivery platform providing transactional and marketing email services, with APIs for integration, analytics, and scalability",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 359,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "transactional-email",
+        "name": "transactional email"
+      },
+      {
+        "id": "email-newsletters",
+        "name": "email newsletters"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://login.sendgrid.com"
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "composio_name": "Shopify",
+    "composio_slug": "shopify",
+    "category": "Ecommerce",
+    "website": "shopify.dev",
+    "what_it_does": "Shopify is an e-commerce platform. This toolkit is GraphQL-first for new Admin API automations while retaining legacy REST compatibility actions for older workflows and numeric-ID interoperability",
+    "auth_methods": [
+      "Api Key",
+      "Oauth2",
+      "S2S Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 315,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ecommerce",
+        "name": "ecommerce"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.shopify.com"
+  },
+  {
+    "id": 42,
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "website": "woocommerce.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 43,
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "website": "developer.bigcommerce.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "composio_name": "Salesforce",
+    "composio_slug": "salesforce",
+    "category": "Ecommerce",
+    "website": "developer.salesforce.com/docs/commerce",
+    "what_it_does": "Salesforce is a leading CRM platform integrating sales, service, marketing, and analytics to build customer relationships and drive business growth",
+    "auth_methods": [
+      "Oauth2",
+      "S2S Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 184,
+    "triggers_count": 7,
+    "categories": [
+      {
+        "id": "crm",
+        "name": "crm"
+      },
+      {
+        "id": "contact-management",
+        "name": "contact management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.salesforce.com/in/"
+  },
+  {
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "website": "developer.adobe.com/commerce",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "website": "developers.squarespace.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 47,
+    "name": "Ecwid",
+    "category": "Ecommerce",
+    "website": "api-docs.ecwid.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 48,
+    "name": "Gumroad",
+    "composio_name": "Gumroad",
+    "composio_slug": "gumroad",
+    "category": "Ecommerce",
+    "website": "gumroad.com/api",
+    "what_it_does": "Gumroad simplifies selling digital goods, physical products, and memberships by offering a streamlined checkout, marketing tools, and direct payout options",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 7,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ecommerce",
+        "name": "ecommerce"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://gumroad.com"
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "website": "developer-docs.amazon.com/sp-api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 50,
+    "name": "fanbasis",
+    "category": "Ecommerce",
+    "website": "fanbasis.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "composio_name": "Dataforseo",
+    "composio_slug": "dataforseo",
+    "category": "Data & SEO",
+    "website": "docs.dataforseo.com",
+    "what_it_does": "SEO data and analytics platform providing SERP data, backlinks, keywords, and competitive intelligence",
+    "auth_methods": [
+      "Basic"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 312,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      },
+      {
+        "id": "marketing",
+        "name": "marketing"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://dataforseo.com"
+  },
+  {
+    "id": 52,
+    "name": "SE Ranking",
+    "composio_name": "Coinranking",
+    "composio_slug": "coinranking",
+    "category": "Data & SEO",
+    "website": "seranking.com/api",
+    "what_it_does": "Coinranking provides a comprehensive API for accessing cryptocurrency market data, including coin prices, market caps, and historical data.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 14,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "analytics",
+        "name": "analytics"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://coinranking.com/"
+  },
+  {
+    "id": 53,
+    "name": "Ahrefs",
+    "composio_name": "Ahrefs",
+    "composio_slug": "ahrefs",
+    "category": "Data & SEO",
+    "website": "ahrefs.com/api",
+    "what_it_does": "Ahrefs is an SEO and marketing platform offering site audits, keyword research, content analysis, and competitive insights to improve search rankings and drive organic traffic",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 40,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "marketing-automation",
+        "name": "marketing automation"
+      },
+      {
+        "id": "analytics",
+        "name": "analytics"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://ahrefs.com/"
+  },
+  {
+    "id": 54,
+    "name": "MrScraper",
+    "category": "Data & SEO",
+    "website": "docs.mrscraper.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 55,
+    "name": "Apify",
+    "composio_name": "Apify",
+    "composio_slug": "apify",
+    "category": "Data & SEO",
+    "website": "docs.apify.com",
+    "what_it_does": "Apify is a platform for building, deploying, and managing web scraping and automation tools, known as Actors.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 112,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ai-web-scraping",
+        "name": "ai web scraping"
+      },
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://apify.com/"
+  },
+  {
+    "id": 56,
+    "name": "Firecrawl",
+    "composio_name": "Firecrawl",
+    "composio_slug": "firecrawl",
+    "category": "Data & SEO",
+    "website": "firecrawl.dev",
+    "what_it_does": "Firecrawl automates web crawling and data extraction, enabling organizations to gather content, index sites, and gain insights from online sources at scale",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 29,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ai-web-scraping",
+        "name": "ai web scraping"
+      },
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.firecrawl.dev/"
+  },
+  {
+    "id": 57,
+    "name": "Bright Data",
+    "composio_name": "Bright Data",
+    "composio_slug": "brightdata",
+    "category": "Data & SEO",
+    "website": "brightdata.com",
+    "what_it_does": "Bright Data provides the world's #1 web data platform with Web Unlocker for bypassing anti-bot systems, SERP API for search engine data, and pre-made scrapers for popular websites. Collect any web data at scale.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 10,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ai-web-scraping",
+        "name": "ai web scraping"
+      },
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://brightdata.com/"
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "category": "Data & SEO",
+    "website": "github.com/sherlock-project/sherlock",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "Data & SEO",
+    "website": "waterfall.io",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 60,
+    "name": "Clay",
+    "category": "Data & SEO",
+    "website": "clay.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "composio_name": "GitHub",
+    "composio_slug": "github",
+    "category": "Developer & Infra",
+    "website": "docs.github.com/rest",
+    "what_it_does": "GitHub is a code hosting platform for version control and collaboration, offering Git-based repository management, issue tracking, and continuous integration features",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 871,
+    "triggers_count": 46,
+    "categories": [
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://github.com/"
+  },
+  {
+    "id": 62,
+    "name": "Vercel",
+    "category": "Developer & Infra",
+    "website": "vercel.com/docs/rest-api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 63,
+    "name": "Netlify",
+    "category": "Developer & Infra",
+    "website": "docs.netlify.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 64,
+    "name": "Cloudflare",
+    "composio_name": "Cloudflare",
+    "composio_slug": "cloudflare",
+    "category": "Developer & Infra",
+    "website": "developers.cloudflare.com/api",
+    "what_it_does": "Cloudflare is a global network designed to make everything you connect to the Internet secure, private, fast, and reliable.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 20,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "security-&-identity-tools",
+        "name": "security & identity tools"
+      },
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://dash.cloudflare.com/sign-up"
+  },
+  {
+    "id": 65,
+    "name": "Supabase",
+    "composio_name": "Supabase",
+    "composio_slug": "supabase",
+    "category": "Developer & Infra",
+    "website": "supabase.com/docs",
+    "what_it_does": "Supabase is an open-source backend-as-a-service providing a Postgres database, authentication, storage, and real-time subscription APIs for building modern applications",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 124,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      },
+      {
+        "id": "databases",
+        "name": "databases"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://supabase.com"
+  },
+  {
+    "id": 66,
+    "name": "Neo4j",
+    "composio_name": "Neo4J",
+    "composio_slug": "neo4j",
+    "category": "Developer & Infra",
+    "website": "neo4j.com/docs/api",
+    "what_it_does": "Graph database platform for connected data and real-time analytics",
+    "auth_methods": [
+      "Oauth2",
+      "Basic",
+      "Api Key",
+      "S2S Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 21,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://neo4j.com"
+  },
+  {
+    "id": 67,
+    "name": "Snowflake",
+    "composio_name": "Snowflake",
+    "composio_slug": "snowflake",
+    "category": "Developer & Infra",
+    "website": "docs.snowflake.com",
+    "what_it_does": "Snowflake is a cloud-based data warehouse offering elastic scaling, secure data sharing, and SQL analytics across multiple cloud environments",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 16,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "databases",
+        "name": "databases"
+      },
+      {
+        "id": "analytics",
+        "name": "analytics"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.snowflake.com/en/"
+  },
+  {
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "category": "Developer & Infra",
+    "website": "mongodb.com/docs/atlas/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 69,
+    "name": "Datadog",
+    "composio_name": "Datadog",
+    "composio_slug": "datadog",
+    "category": "Developer & Infra",
+    "website": "docs.datadoghq.com/api",
+    "what_it_does": "Datadog offers monitoring, observability, and security for cloud-scale applications, unifying metrics, logs, and traces to help teams detect issues and optimize performance",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 42,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "server-monitoring",
+        "name": "server monitoring"
+      },
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.datadoghq.com"
+  },
+  {
+    "id": 70,
+    "name": "Sentry",
+    "composio_name": "Sentry",
+    "composio_slug": "sentry",
+    "category": "Developer & Infra",
+    "website": "docs.sentry.io/api",
+    "what_it_does": "Integrate Sentry to manage your error tracking and monitoring.",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 209,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      },
+      {
+        "id": "server-monitoring",
+        "name": "server monitoring"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://sentry.io/welcome/"
+  },
+  {
+    "id": 71,
+    "name": "Notion",
+    "composio_name": "Notion",
+    "composio_slug": "notion",
+    "category": "Productivity & PM",
+    "website": "developers.notion.com",
+    "what_it_does": "Notion centralizes notes, docs, wikis, and tasks in a unified workspace, letting teams build custom workflows for collaboration and knowledge management",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 45,
+    "triggers_count": 8,
+    "categories": [
+      {
+        "id": "notes",
+        "name": "notes"
+      },
+      {
+        "id": "documents",
+        "name": "documents"
+      },
+      {
+        "id": "project-management",
+        "name": "project management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.notion.so"
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "composio_name": "Airtable",
+    "composio_slug": "airtable",
+    "category": "Productivity & PM",
+    "website": "airtable.com/developers",
+    "what_it_does": "Airtable merges spreadsheet functionality with database power, enabling teams to organize projects, track tasks, and collaborate through customizable views, automation, and integrations for data management",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 24,
+    "triggers_count": 6,
+    "categories": [
+      {
+        "id": "productivity",
+        "name": "productivity"
+      },
+      {
+        "id": "spreadsheets",
+        "name": "spreadsheets"
+      },
+      {
+        "id": "databases",
+        "name": "databases"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.airtable.com/"
+  },
+  {
+    "id": 73,
+    "name": "Linear",
+    "composio_name": "Linear",
+    "composio_slug": "linear",
+    "category": "Productivity & PM",
+    "website": "developers.linear.app",
+    "what_it_does": "Linear is a streamlined issue tracking and project planning tool for modern teams, featuring fast workflows, keyboard shortcuts, and GitHub integrations",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 46,
+    "triggers_count": 12,
+    "categories": [
+      {
+        "id": "project-management",
+        "name": "project management"
+      },
+      {
+        "id": "task-management",
+        "name": "task management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://linear.app"
+  },
+  {
+    "id": 74,
+    "name": "Jira",
+    "composio_name": "Jira",
+    "composio_slug": "jira",
+    "category": "Productivity & PM",
+    "website": "developer.atlassian.com",
+    "what_it_does": "A tool for bug tracking, issue tracking, and agile project management.",
+    "auth_methods": [
+      "Oauth2",
+      "S2S Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 97,
+    "triggers_count": 3,
+    "categories": [
+      {
+        "id": "project-management",
+        "name": "project management"
+      },
+      {
+        "id": "task-management",
+        "name": "task management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.atlassian.com/software/jira"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "composio_name": "Asana",
+    "composio_slug": "asana",
+    "category": "Productivity & PM",
+    "website": "developers.asana.com",
+    "what_it_does": "Tool to help teams organize, track, and manage their work.",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 153,
+    "triggers_count": 6,
+    "categories": [
+      {
+        "id": "project-management",
+        "name": "project management"
+      },
+      {
+        "id": "task-management",
+        "name": "task management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://asana.com/"
+  },
+  {
+    "id": 76,
+    "name": "Monday.com",
+    "composio_name": "Monday",
+    "composio_slug": "monday",
+    "category": "Productivity & PM",
+    "website": "developer.monday.com",
+    "what_it_does": "monday.com is a customizable work management platform for project planning, collaboration, and automation, supporting agile, sales, marketing, and more",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 121,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "project-management",
+        "name": "project management"
+      },
+      {
+        "id": "task-management",
+        "name": "task management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://monday.com/"
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "composio_name": "ClickUp",
+    "composio_slug": "clickup",
+    "category": "Productivity & PM",
+    "website": "clickup.com/api",
+    "what_it_does": "ClickUp unifies tasks, docs, goals, and chat in a single platform, allowing teams to plan, organize, and collaborate across projects with customizable workflows",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 162,
+    "triggers_count": 21,
+    "categories": [
+      {
+        "id": "productivity",
+        "name": "productivity"
+      },
+      {
+        "id": "project-management",
+        "name": "project management"
+      },
+      {
+        "id": "task-management",
+        "name": "task management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://clickup.com"
+  },
+  {
+    "id": 78,
+    "name": "Coda",
+    "composio_name": "Coda",
+    "composio_slug": "coda",
+    "category": "Productivity & PM",
+    "website": "coda.io/developers",
+    "what_it_does": "Collaborative workspace platform that transforms documents into powerful tools for team productivity and project management",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 109,
+    "triggers_count": 4,
+    "categories": [
+      {
+        "id": "productivity",
+        "name": "productivity"
+      },
+      {
+        "id": "project-management",
+        "name": "project management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://coda.io/"
+  },
+  {
+    "id": 79,
+    "name": "Smartsheet",
+    "category": "Productivity & PM",
+    "website": "smartsheet.com/developers",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 80,
+    "name": "Harvest",
+    "composio_name": "Harvest",
+    "composio_slug": "harvest",
+    "category": "Productivity & PM",
+    "website": "getharvest.com",
+    "what_it_does": "Harvest is a time-tracking and invoicing tool designed for teams and freelancers, helping them log billable hours, manage projects, and streamline payments",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 57,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "time-tracking-software",
+        "name": "time tracking software"
+      },
+      {
+        "id": "proposal-&-invoice-management",
+        "name": "proposal & invoice management"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.getharvest.com/"
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "composio_name": "Stripe",
+    "composio_slug": "stripe",
+    "category": "Finance & Fintech",
+    "website": "stripe.com/docs/api",
+    "what_it_does": "Stripe offers online payment infrastructure, fraud prevention, and APIs enabling businesses to accept and manage payments globally",
+    "auth_methods": [
+      "Api Key",
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 425,
+    "triggers_count": 7,
+    "categories": [
+      {
+        "id": "payment-processing",
+        "name": "payment processing"
+      },
+      {
+        "id": "ecommerce",
+        "name": "ecommerce"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://stripe.com"
+  },
+  {
+    "id": 82,
+    "name": "Plaid",
+    "category": "Finance & Fintech",
+    "website": "plaid.com/docs",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "category": "Finance & Fintech",
+    "website": "binance-docs.github.io",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "composio_name": "Connecteam",
+    "composio_slug": "connecteam",
+    "category": "Finance & Fintech",
+    "website": "paygent",
+    "what_it_does": "Connecteam is a comprehensive workforce management platform designed to streamline operations, enhance communication, and improve HR processes for deskless teams.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 16,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "human-resources",
+        "name": "human resources"
+      },
+      {
+        "id": "team-collaboration",
+        "name": "team collaboration"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://connecteam.com"
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "category": "Finance & Fintech",
+    "website": "ipayx.ai/docs",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 86,
+    "name": "QuickBooks",
+    "composio_name": "QuickBooks",
+    "composio_slug": "quickbooks",
+    "category": "Finance & Fintech",
+    "website": "developer.intuit.com",
+    "what_it_does": "Quickbooks is a cloud-based accounting software that helps you manage your finances, track your income and expenses, and get insights into your business",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 114,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "accounting",
+        "name": "accounting"
+      },
+      {
+        "id": "payment-processing",
+        "name": "payment processing"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://quickbooks.intuit.com"
+  },
+  {
+    "id": 87,
+    "name": "Xero",
+    "composio_name": "Xero",
+    "composio_slug": "xero",
+    "category": "Finance & Fintech",
+    "website": "developer.xero.com",
+    "what_it_does": "Xero is a cloud-based accounting software for small businesses, providing invoicing, bank reconciliation, bookkeeping, and financial reporting in real time",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 53,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "accounting",
+        "name": "accounting"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.xero.com/"
+  },
+  {
+    "id": 88,
+    "name": "Brex",
+    "composio_name": "Brex",
+    "composio_slug": "brex",
+    "category": "Finance & Fintech",
+    "website": "developer.brex.com",
+    "what_it_does": "Brex provides corporate credit cards, spend management, and financial tools tailored for startups and tech businesses to optimize cash flow, accounting, and growth",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 84,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "accounting",
+        "name": "accounting"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.brex.com/"
+  },
+  {
+    "id": 89,
+    "name": "Ramp",
+    "composio_name": "Ramp",
+    "composio_slug": "ramp",
+    "category": "Finance & Fintech",
+    "website": "docs.ramp.com",
+    "what_it_does": "Ramp is a platform that helps you manage your finances, track your income and expenses, and get insights into your business",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Broad (50+ actions)",
+    "tools_count": 88,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "accounting",
+        "name": "accounting"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://ramp.com/"
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "category": "Finance & Fintech",
+    "website": "pitchbook.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "AI & Research",
+    "website": "cloud.google.com/gemini",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "composio_name": "SSLMate Cert Spotter API",
+    "composio_slug": "sslmate_cert_spotter_api",
+    "category": "AI & Research",
+    "website": "help.otter.ai",
+    "what_it_does": "Cert Spotter API by SSLMate monitors Certificate Transparency logs to alert users about SSL/TLS certificates issued for their domains, helping detect unauthorized certificates and potential security issues.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 9,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "security-&-identity-tools",
+        "name": "security & identity tools"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://sslmate.com/certspotter/"
+  },
+  {
+    "id": 93,
+    "name": "Fathom",
+    "composio_name": "Fathom",
+    "composio_slug": "fathom",
+    "category": "AI & Research",
+    "website": "fathom.video",
+    "what_it_does": "AI meeting assistant that records, transcribes, and summarizes meetings",
+    "auth_methods": [
+      "Oauth2",
+      "Api Key"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 7,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "ai-meeting-assistants",
+        "name": "ai meeting assistants"
+      },
+      {
+        "id": "transcription",
+        "name": "transcription"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://fathom.video"
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "category": "AI & Research",
+    "website": "consensus.app",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 95,
+    "name": "Reducto",
+    "category": "AI & Research",
+    "website": "reducto.ai",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 96,
+    "name": "Devin",
+    "composio_name": "Devin MCP",
+    "composio_slug": "devin_mcp",
+    "category": "AI & Research",
+    "website": "docs.devin.ai",
+    "what_it_does": "AI-powered access to GitHub repository documentation and codebase analysis, including private repositories, via Devin.",
+    "auth_methods": [
+      "Api Key"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Narrow (<20)",
+    "tools_count": 4,
+    "triggers_count": 0,
+    "categories": [
+      {
+        "id": "model-context-protocol",
+        "name": "model context protocol"
+      },
+      {
+        "id": "developer-tools",
+        "name": "developer tools"
+      },
+      {
+        "id": "ai-assistants",
+        "name": "ai assistants"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://mcp.devin.ai/mcp"
+  },
+  {
+    "id": 97,
+    "name": "higgsfield",
+    "category": "AI & Research",
+    "website": "higgsfield.ai/cli",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "category": "AI & Research",
+    "website": "github.com/mermaid-js/mermaid-cli",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "composio_name": "YouTube",
+    "composio_slug": "youtube",
+    "category": "AI & Research",
+    "website": "transcriptapi.com",
+    "what_it_does": "YouTube is a video-sharing platform with user-generated content, live streaming, and monetization opportunities, widely used for marketing, education, and entertainment",
+    "auth_methods": [
+      "Oauth2"
+    ],
+    "composio_managed_auth": [
+      "OAUTH2"
+    ],
+    "selfserve": "Deprecated",
+    "no_auth": false,
+    "api_breadth": "Moderate (20-50)",
+    "tools_count": 48,
+    "triggers_count": 4,
+    "categories": [
+      {
+        "id": "video-&-audio",
+        "name": "video & audio"
+      },
+      {
+        "id": "social-media-accounts",
+        "name": "social media accounts"
+      }
+    ],
+    "deprecated": true,
+    "buildability": "Deprecated",
+    "main_blocker": "Toolkit marked as deprecated in Composio",
+    "has_mcp": null,
+    "source": "composio_api",
+    "composio_url": "https://www.youtube.com"
+  },
+  {
+    "id": 100,
+    "name": "Grain",
+    "category": "AI & Research",
+    "website": "grain.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "composio_managed_auth": [],
+    "selfserve": "Unknown",
+    "no_auth": false,
+    "api_breadth": "Unknown",
+    "tools_count": 0,
+    "triggers_count": 0,
+    "categories": [],
+    "deprecated": false,
+    "buildability": "Not in Composio",
+    "main_blocker": "App not found in Composio registry",
+    "has_mcp": null,
+    "source": "unknown",
+    "composio_url": ""
+  }
+]

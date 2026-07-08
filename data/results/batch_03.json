@@ -1,0 +1,255 @@
+[
+  {
+    "id": 21,
+    "name": "Slack",
+    "category": "Communications",
+    "website": "slack.com",
+    "docs_url": "https://api.slack.com/docs",
+    "what_it_does": "Slack developer docs | Slack Developer Docs",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://api.slack.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 22,
+    "name": "Twilio",
+    "category": "Communications",
+    "website": "twilio.com",
+    "docs_url": "https://www.twilio.com/docs",
+    "what_it_does": "Reference documentation for all Twilio products. Code snippets, tutorials, and sample apps for common use cases and communications solutions.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://www.twilio.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 23,
+    "name": "Zoho Cliq",
+    "category": "Communications",
+    "website": "zoho.com/cliq",
+    "docs_url": "https://www.zoho.com/cliq/help/restapi",
+    "what_it_does": "Introduction | Zoho Cliq | API Documentation",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.zoho.com/cliq/help/restapi",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 24,
+    "name": "Lark",
+    "category": "Communications",
+    "website": "open.larksuite.com",
+    "docs_url": "https://open.larksuite.com/document",
+    "what_it_does": "Lark\u5f00\u53d1\u6587\u6863\u4e2d\u5305\u542b\u4e30\u5bcc\u591a\u6837\u7684\u5f00\u53d1\u6307\u5357\u3001\u6559\u7a0b\u548c\u793a\u4f8b\uff0c\u8ba9\u5f00\u53d1\u8005\u83b7\u5f97\u6109\u60a6\u3001\u9ad8\u6548\u7684\u5e94\u7528\u5f00\u53d1\u4f53\u9a8c\u3002",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://open.larksuite.com/document",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 25,
+    "name": "Pumble",
+    "category": "Communications",
+    "website": "pumble.com",
+    "docs_url": "https://pumble.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://pumble.com/api",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 26,
+    "name": "Discord",
+    "category": "Communications",
+    "website": "discord.com",
+    "docs_url": "https://discord.com/developers/docs/intro",
+    "what_it_does": "Build bots and integrations on Discord, or connect your game with rich presence, voice chat, and more.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://discord.com/developers/docs/intro",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 27,
+    "name": "Telegram",
+    "category": "Communications",
+    "website": "core.telegram.org",
+    "docs_url": "https://core.telegram.org/bots/api",
+    "what_it_does": "Telegram Bot API",
+    "auth_methods": [
+      "Bot Token"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://core.telegram.org/bots/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 28,
+    "name": "WhatsApp Business",
+    "category": "Communications",
+    "website": "developers.facebook.com/docs/whatsapp",
+    "docs_url": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 29,
+    "name": "Aircall",
+    "category": "Communications",
+    "website": "aircall.io",
+    "docs_url": "https://developer.aircall.io",
+    "what_it_does": "Let's build the future of voice together, one call at a time.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://developer.aircall.io",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 30,
+    "name": "Vonage",
+    "category": "Communications",
+    "website": "developer.vonage.com",
+    "docs_url": "https://developer.vonage.com/en/api",
+    "what_it_does": "Get guides and code snippets, browse reference documentation, and more to develop connected applications with Vonage APIs and SDKs.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.vonage.com/en/api",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

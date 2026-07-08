@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "name": "Salesforce",
+    "category": "CRM & Sales",
+    "website": "salesforce.com",
+    "docs_url": "https://developer.salesforce.com/docs",
+    "what_it_does": "Learn how to build mobile and enterprise applications in the cloud using our developer documentation.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.salesforce.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "category": "CRM & Sales",
+    "website": "hubspot.com",
+    "docs_url": "https://developers.hubspot.com/docs/api",
+    "what_it_does": "Reference documentation for HubSpot&#x27;s date-versioned APIs, introduced with the 2026-03 release.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.hubspot.com/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 3,
+    "name": "Pipedrive",
+    "category": "CRM & Sales",
+    "website": "pipedrive.com",
+    "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+    "what_it_does": "This Pipedrive API reference and documentation helps you implement the RESTful Pipedrive API, enabling developers to build integrations with Pipedrive.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.pipedrive.com/docs/api/v1",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 4,
+    "name": "Attio",
+    "category": "CRM & Sales",
+    "website": "attio.com",
+    "docs_url": "https://docs.attio.com",
+    "what_it_does": "Start building Attio Apps",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.attio.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 5,
+    "name": "Twenty",
+    "category": "CRM & Sales",
+    "website": "twenty.com",
+    "docs_url": "https://docs.twenty.com",
+    "what_it_does": "Why Twenty - Twenty Documentation",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.twenty.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 6,
+    "name": "Podio",
+    "category": "CRM & Sales",
+    "website": "podio.com",
+    "docs_url": "https://developers.podio.com",
+    "what_it_does": "Developers - Podio API Documentation",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.podio.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 7,
+    "name": "Zoho CRM",
+    "category": "CRM & Sales",
+    "website": "zoho.com/crm",
+    "docs_url": "https://www.zoho.com/crm/developer/docs/api/v7",
+    "what_it_does": "Use Zoho CRM&#039;s V7 APIs to create custom solutions to your requirements and integrate third-party applications seamlessly with Zoho CRM.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.zoho.com/crm/developer/docs/api/v7",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 8,
+    "name": "Close",
+    "category": "CRM & Sales",
+    "website": "close.com",
+    "docs_url": "https://developer.close.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.close.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 9,
+    "name": "Copper",
+    "category": "CRM & Sales",
+    "website": "copper.com",
+    "docs_url": "https://developer.copper.com",
+    "what_it_does": "The Copper Developer API provides a RESTful interface with JSON-formatted responses to access most Copper resources",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.copper.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "category": "CRM & Sales",
+    "website": "dealcloud.com",
+    "docs_url": "https://api.docs.dealcloud.com",
+    "what_it_does": "Dealcloud Developer Documentation - DealCloud API Docs",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://api.docs.dealcloud.com",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

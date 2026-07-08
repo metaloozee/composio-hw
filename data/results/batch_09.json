@@ -1,0 +1,262 @@
+[
+  {
+    "id": 81,
+    "name": "Stripe",
+    "category": "Finance & Fintech",
+    "website": "stripe.com/docs/api",
+    "docs_url": "https://stripe.com/docs/api",
+    "what_it_does": "Stripe API Reference",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://stripe.com/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 82,
+    "name": "Plaid",
+    "category": "Finance & Fintech",
+    "website": "plaid.com/docs",
+    "docs_url": "https://plaid.com/docs/api",
+    "what_it_does": "Comprehensive reference for integrating with Plaid API endpoints",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://plaid.com/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "category": "Finance & Fintech",
+    "website": "binance-docs.github.io",
+    "docs_url": "https://binance-docs.github.io/apidocs",
+    "what_it_does": "Redirecting to https://developers.binance.com/en",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://binance-docs.github.io/apidocs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "category": "Finance & Fintech",
+    "website": "paygent",
+    "docs_url": "https://developer.paygent.co.jp",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://developer.paygent.co.jp",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "category": "Finance & Fintech",
+    "website": "ipayx.ai/docs",
+    "docs_url": "https://ipayx.ai/docs",
+    "what_it_does": "FINTRAC-registered (MSB C10001283) FX forensic audit layer. One-click audit of bank or card-network rates vs live mid-market across 300+ currencies.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://ipayx.ai/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 86,
+    "name": "QuickBooks",
+    "category": "Finance & Fintech",
+    "website": "developer.intuit.com",
+    "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/api",
+    "what_it_does": "Intuit Developer",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.intuit.com/app/developer/qbo/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 87,
+    "name": "Xero",
+    "category": "Finance & Fintech",
+    "website": "developer.xero.com",
+    "docs_url": "https://developer.xero.com/documentation/api",
+    "what_it_does": "Accounting API Overview \u2014 Xero Developer",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.xero.com/documentation/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 88,
+    "name": "Brex",
+    "category": "Finance & Fintech",
+    "website": "developer.brex.com",
+    "docs_url": "https://developer.brex.com",
+    "what_it_does": "Overview",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.brex.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 89,
+    "name": "Ramp",
+    "category": "Finance & Fintech",
+    "website": "docs.ramp.com",
+    "docs_url": "https://docs.ramp.com/developer-api",
+    "what_it_does": "Ramp API Documentation",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://docs.ramp.com/developer-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "category": "Finance & Fintech",
+    "website": "pitchbook.com",
+    "docs_url": "https://pitchbook.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://pitchbook.com",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  }
+]

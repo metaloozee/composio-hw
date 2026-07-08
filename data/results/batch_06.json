@@ -1,0 +1,256 @@
+[
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "category": "Data & SEO",
+    "website": "docs.dataforseo.com",
+    "docs_url": "https://docs.dataforseo.com",
+    "what_it_does": "DataForSEO API v.3",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.dataforseo.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 52,
+    "name": "SE Ranking",
+    "category": "Data & SEO",
+    "website": "seranking.com/api",
+    "docs_url": "https://seranking.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://seranking.com/api",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 53,
+    "name": "Ahrefs",
+    "category": "Data & SEO",
+    "website": "ahrefs.com/api",
+    "docs_url": "https://ahrefs.com/api",
+    "what_it_does": "Access Ahrefs marketing and search data through our APIs and developer tools to build custom integrations and workflows.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "REST",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://ahrefs.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 54,
+    "name": "MrScraper",
+    "category": "Data & SEO",
+    "website": "docs.mrscraper.com",
+    "docs_url": "https://docs.mrscraper.com",
+    "what_it_does": "Your all-in-one guide to understanding, configuring, and using our scraping platform.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.mrscraper.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 55,
+    "name": "Apify",
+    "category": "Data & SEO",
+    "website": "docs.apify.com",
+    "docs_url": "https://docs.apify.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.apify.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 56,
+    "name": "Firecrawl",
+    "category": "Data & SEO",
+    "website": "firecrawl.dev",
+    "docs_url": "https://docs.firecrawl.dev",
+    "what_it_does": "Search the web, scrape any page, and interact with it \u2014 all through one API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.firecrawl.dev",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 57,
+    "name": "Bright Data",
+    "category": "Data & SEO",
+    "website": "brightdata.com",
+    "docs_url": "https://docs.brightdata.com",
+    "what_it_does": "Bright Data&#x27;s web data platform: residential, mobile and ISP proxies, 700+ pre-built scrapers, a dataset marketplace and AI-ready APIs.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.brightdata.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "category": "Data & SEO",
+    "website": "github.com/sherlock-project/sherlock",
+    "docs_url": "https://github.com/sherlock-project/sherlock",
+    "what_it_does": "Hunt down social media accounts by username across social networks - sherlock-project/sherlock",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://github.com/sherlock-project/sherlock",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "Data & SEO",
+    "website": "waterfall.io",
+    "docs_url": "https://waterfall.io",
+    "what_it_does": "Waterfall | One B2B data solution to connect them all",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://waterfall.io",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 60,
+    "name": "Clay",
+    "category": "Data & SEO",
+    "website": "clay.com",
+    "docs_url": "https://www.clay.com",
+    "what_it_does": "Clay | Build systems to grow revenue",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://www.clay.com",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

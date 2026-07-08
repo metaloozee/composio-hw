@@ -1,0 +1,2563 @@
+[
+  {
+    "id": 1,
+    "name": "Salesforce",
+    "category": "CRM & Sales",
+    "website": "salesforce.com",
+    "docs_url": "https://developer.salesforce.com/docs",
+    "what_it_does": "Learn how to build mobile and enterprise applications in the cloud using our developer documentation.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.salesforce.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "category": "CRM & Sales",
+    "website": "hubspot.com",
+    "docs_url": "https://developers.hubspot.com/docs/api",
+    "what_it_does": "Reference documentation for HubSpot&#x27;s date-versioned APIs, introduced with the 2026-03 release.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.hubspot.com/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 3,
+    "name": "Pipedrive",
+    "category": "CRM & Sales",
+    "website": "pipedrive.com",
+    "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+    "what_it_does": "This Pipedrive API reference and documentation helps you implement the RESTful Pipedrive API, enabling developers to build integrations with Pipedrive.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.pipedrive.com/docs/api/v1",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 4,
+    "name": "Attio",
+    "category": "CRM & Sales",
+    "website": "attio.com",
+    "docs_url": "https://docs.attio.com",
+    "what_it_does": "Start building Attio Apps",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.attio.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 5,
+    "name": "Twenty",
+    "category": "CRM & Sales",
+    "website": "twenty.com",
+    "docs_url": "https://docs.twenty.com",
+    "what_it_does": "Why Twenty - Twenty Documentation",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.twenty.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 6,
+    "name": "Podio",
+    "category": "CRM & Sales",
+    "website": "podio.com",
+    "docs_url": "https://developers.podio.com",
+    "what_it_does": "Developers - Podio API Documentation",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.podio.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 7,
+    "name": "Zoho CRM",
+    "category": "CRM & Sales",
+    "website": "zoho.com/crm",
+    "docs_url": "https://www.zoho.com/crm/developer/docs/api/v7",
+    "what_it_does": "Use Zoho CRM&#039;s V7 APIs to create custom solutions to your requirements and integrate third-party applications seamlessly with Zoho CRM.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.zoho.com/crm/developer/docs/api/v7",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 8,
+    "name": "Close",
+    "category": "CRM & Sales",
+    "website": "close.com",
+    "docs_url": "https://developer.close.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.close.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 9,
+    "name": "Copper",
+    "category": "CRM & Sales",
+    "website": "copper.com",
+    "docs_url": "https://developer.copper.com",
+    "what_it_does": "The Copper Developer API provides a RESTful interface with JSON-formatted responses to access most Copper resources",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.copper.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "category": "CRM & Sales",
+    "website": "dealcloud.com",
+    "docs_url": "https://api.docs.dealcloud.com",
+    "what_it_does": "Dealcloud Developer Documentation - DealCloud API Docs",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://api.docs.dealcloud.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "category": "Support & Helpdesk",
+    "website": "zendesk.com",
+    "docs_url": "https://developer.zendesk.com/api-reference",
+    "what_it_does": "Developer documentation for products at Zendesk",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developer.zendesk.com/api-reference",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 12,
+    "name": "Intercom",
+    "category": "Support & Helpdesk",
+    "website": "intercom.com",
+    "docs_url": "https://developers.intercom.com",
+    "what_it_does": "Intercom Developers | Intercom and Fin Developer Platform",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developers.intercom.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 13,
+    "name": "Freshdesk",
+    "category": "Support & Helpdesk",
+    "website": "freshdesk.com",
+    "docs_url": "https://developers.freshdesk.com/api",
+    "what_it_does": "Freshdesk",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://developers.freshdesk.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 14,
+    "name": "Front",
+    "category": "Support & Helpdesk",
+    "website": "front.com",
+    "docs_url": "https://dev.frontapp.com",
+    "what_it_does": "Welcome to the Front Platform \ud83d\udc4b Whether you\u2019re looking to build a custom integration just for your team or looking to publicly launch a Front integration, you\u2019re in the right place! Our documentation ",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://dev.frontapp.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "category": "Support & Helpdesk",
+    "website": "usepylon.com",
+    "docs_url": "https://docs.usepylon.com",
+    "what_it_does": "Introduction | Pylon",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.usepylon.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 16,
+    "name": "LiveAgent",
+    "category": "Support & Helpdesk",
+    "website": "liveagent.com",
+    "docs_url": "https://www.liveagent.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://www.liveagent.com/api",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 17,
+    "name": "Plain",
+    "category": "Support & Helpdesk",
+    "website": "plain.com",
+    "docs_url": "https://www.plain.com/docs",
+    "what_it_does": "An overview of Plain&#x27;s GraphQL API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.plain.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 18,
+    "name": "Help Scout",
+    "category": "Support & Helpdesk",
+    "website": "helpscout.com",
+    "docs_url": "https://developer.helpscout.com/mailbox-api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://developer.helpscout.com/mailbox-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 19,
+    "name": "Gorgias",
+    "category": "Support & Helpdesk",
+    "website": "gorgias.com",
+    "docs_url": "https://developers.gorgias.com",
+    "what_it_does": "gorgias-developers",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.gorgias.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 20,
+    "name": "Gladly",
+    "category": "Support & Helpdesk",
+    "website": "gladly.com",
+    "docs_url": "https://developer.gladly.com",
+    "what_it_does": "Main Home - Gladly Developer",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.gladly.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 21,
+    "name": "Slack",
+    "category": "Communications",
+    "website": "slack.com",
+    "docs_url": "https://api.slack.com/docs",
+    "what_it_does": "Slack developer docs | Slack Developer Docs",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://api.slack.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 22,
+    "name": "Twilio",
+    "category": "Communications",
+    "website": "twilio.com",
+    "docs_url": "https://www.twilio.com/docs",
+    "what_it_does": "Reference documentation for all Twilio products. Code snippets, tutorials, and sample apps for common use cases and communications solutions.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://www.twilio.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 23,
+    "name": "Zoho Cliq",
+    "category": "Communications",
+    "website": "zoho.com/cliq",
+    "docs_url": "https://www.zoho.com/cliq/help/restapi",
+    "what_it_does": "Introduction | Zoho Cliq | API Documentation",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.zoho.com/cliq/help/restapi",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 24,
+    "name": "Lark",
+    "category": "Communications",
+    "website": "open.larksuite.com",
+    "docs_url": "https://open.larksuite.com/document",
+    "what_it_does": "Lark\u5f00\u53d1\u6587\u6863\u4e2d\u5305\u542b\u4e30\u5bcc\u591a\u6837\u7684\u5f00\u53d1\u6307\u5357\u3001\u6559\u7a0b\u548c\u793a\u4f8b\uff0c\u8ba9\u5f00\u53d1\u8005\u83b7\u5f97\u6109\u60a6\u3001\u9ad8\u6548\u7684\u5e94\u7528\u5f00\u53d1\u4f53\u9a8c\u3002",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://open.larksuite.com/document",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 25,
+    "name": "Pumble",
+    "category": "Communications",
+    "website": "pumble.com",
+    "docs_url": "https://pumble.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://pumble.com/api",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 26,
+    "name": "Discord",
+    "category": "Communications",
+    "website": "discord.com",
+    "docs_url": "https://discord.com/developers/docs/intro",
+    "what_it_does": "Build bots and integrations on Discord, or connect your game with rich presence, voice chat, and more.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://discord.com/developers/docs/intro",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 27,
+    "name": "Telegram",
+    "category": "Communications",
+    "website": "core.telegram.org",
+    "docs_url": "https://core.telegram.org/bots/api",
+    "what_it_does": "Telegram Bot API",
+    "auth_methods": [
+      "Bot Token"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://core.telegram.org/bots/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 28,
+    "name": "WhatsApp Business",
+    "category": "Communications",
+    "website": "developers.facebook.com/docs/whatsapp",
+    "docs_url": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 29,
+    "name": "Aircall",
+    "category": "Communications",
+    "website": "aircall.io",
+    "docs_url": "https://developer.aircall.io",
+    "what_it_does": "Let's build the future of voice together, one call at a time.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://developer.aircall.io",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 30,
+    "name": "Vonage",
+    "category": "Communications",
+    "website": "developer.vonage.com",
+    "docs_url": "https://developer.vonage.com/en/api",
+    "what_it_does": "Get guides and code snippets, browse reference documentation, and more to develop connected applications with Vonage APIs and SDKs.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.vonage.com/en/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "category": "Marketing & Ads",
+    "website": "developers.google.com/google-ads",
+    "docs_url": "https://developers.google.com/google-ads/api/docs",
+    "what_it_does": "The Google Ads API provides developers with tools to build applications that can interact with the Google Ads platform.",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.google.com/google-ads/api/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 32,
+    "name": "Meta Ads",
+    "category": "Marketing & Ads",
+    "website": "developers.facebook.com/docs/marketing-apis",
+    "docs_url": "https://developers.facebook.com/docs/marketing-apis",
+    "what_it_does": "Marketing API | Meta",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.facebook.com/docs/marketing-apis",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "category": "Marketing & Ads",
+    "website": "learn.microsoft.com/linkedin/marketing",
+    "docs_url": "https://learn.microsoft.com/en-us/linkedin/marketing",
+    "what_it_does": "The LinkedIn Marketing Platform helps businesses grow by building technology to reach, engage, and convert professional audiences at scale. The platform offers APIs to create LinkedIn marketing campai",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://learn.microsoft.com/en-us/linkedin/marketing",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 34,
+    "name": "GoHighLevel",
+    "category": "Marketing & Ads",
+    "website": "highlevel.stoplight.io",
+    "docs_url": "https://highlevel.stoplight.io/docs/integration",
+    "what_it_does": "The API Design Management Platform powering the world&#x27;s leading API first companies. Powered by Stoplight.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://highlevel.stoplight.io/docs/integration",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 35,
+    "name": "Mailchimp",
+    "category": "Marketing & Ads",
+    "website": "mailchimp.com/developer",
+    "docs_url": "https://mailchimp.com/developer",
+    "what_it_does": "Find all the Mailchimp API documentation and tools developers need to send marketing and transactional emails.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "GraphQL"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://mailchimp.com/developer",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 36,
+    "name": "Klaviyo",
+    "category": "Marketing & Ads",
+    "website": "developers.klaviyo.com",
+    "docs_url": "https://developers.klaviyo.com",
+    "what_it_does": "API Reference &amp; Technical Guides | Klaviyo Developers",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.klaviyo.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 37,
+    "name": "systeme.io",
+    "category": "Marketing & Ads",
+    "website": "systeme.io",
+    "docs_url": "https://developer.systeme.io",
+    "what_it_does": "Reference",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.systeme.io",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 38,
+    "name": "Pinterest",
+    "category": "Marketing & Ads",
+    "website": "developers.pinterest.com",
+    "docs_url": "https://developers.pinterest.com/docs/api",
+    "what_it_does": "Pinterest Developers",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.pinterest.com/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 39,
+    "name": "Threads (Meta)",
+    "category": "Marketing & Ads",
+    "website": "developers.facebook.com/docs/threads",
+    "docs_url": "https://developers.facebook.com/docs/threads",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.facebook.com/docs/threads",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 40,
+    "name": "SendGrid",
+    "category": "Marketing & Ads",
+    "website": "sendgrid.com",
+    "docs_url": "https://docs.sendgrid.com/api-reference",
+    "what_it_does": "The SendGrid API reference provides detailed descriptions and code samples for every Twilio SendGrid API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Webhooks"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://docs.sendgrid.com/api-reference",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 41,
+    "name": "Shopify",
+    "category": "Ecommerce",
+    "website": "shopify.dev",
+    "docs_url": "https://shopify.dev/docs/api",
+    "what_it_does": "Explore Shopify&#x27;s APIs, references, and developer tools. Find the right resources for building apps, storefronts, themes, and integrations.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://shopify.dev/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 42,
+    "name": "WooCommerce",
+    "category": "Ecommerce",
+    "website": "woocommerce.com",
+    "docs_url": "https://woocommerce.com/document/woocommerce-rest-api",
+    "what_it_does": "WooCommerce REST API Documentation - WooCommerce",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://woocommerce.com/document/woocommerce-rest-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 43,
+    "name": "BigCommerce",
+    "category": "Ecommerce",
+    "website": "developer.bigcommerce.com",
+    "docs_url": "https://developer.bigcommerce.com/docs/rest",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://developer.bigcommerce.com/docs/rest",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "website": "developer.salesforce.com/docs/commerce",
+    "docs_url": "https://developer.salesforce.com/docs/commerce",
+    "what_it_does": "Develop personalized ecommerce experiences with our fast, flexible solutions.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.salesforce.com/docs/commerce",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "category": "Ecommerce",
+    "website": "developer.adobe.com/commerce",
+    "docs_url": "https://developer.adobe.com/commerce/webapi/rest",
+    "what_it_does": "Overview of the Adobe Commerce and Magento Open Source REST API documentation.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developer.adobe.com/commerce/webapi/rest",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "website": "developers.squarespace.com",
+    "docs_url": "https://developers.squarespace.com",
+    "what_it_does": "Squarespace offers a suite of different tools for developers. Find the offering that's right for you, or get started with a Developer Platform website.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developers.squarespace.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 47,
+    "name": "Ecwid",
+    "category": "Ecommerce",
+    "website": "api-docs.ecwid.com",
+    "docs_url": "https://api-docs.ecwid.com/reference",
+    "what_it_does": "Build with Ecwid apps | Ecwid Documentation",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://api-docs.ecwid.com/reference",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 48,
+    "name": "Gumroad",
+    "category": "Ecommerce",
+    "website": "gumroad.com/api",
+    "docs_url": "https://app.gumroad.com/api",
+    "what_it_does": "API",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://app.gumroad.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "website": "developer-docs.amazon.com/sp-api",
+    "docs_url": "https://developer-docs.amazon.com/sp-api/docs",
+    "what_it_does": "Information about how to use the SP-API documentation site, and quick links for SP-API content.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer-docs.amazon.com/sp-api/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 50,
+    "name": "fanbasis",
+    "category": "Ecommerce",
+    "website": "fanbasis.com",
+    "docs_url": "https://fanbasis.com",
+    "what_it_does": "FanBasis is the all-in-one marketplace OS for digital products, combining payments, hosting, fulfillment, upsells, and analytics in one seamless platform.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Gated",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://fanbasis.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 51,
+    "name": "DataForSEO",
+    "category": "Data & SEO",
+    "website": "docs.dataforseo.com",
+    "docs_url": "https://docs.dataforseo.com",
+    "what_it_does": "DataForSEO API v.3",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.dataforseo.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 52,
+    "name": "SE Ranking",
+    "category": "Data & SEO",
+    "website": "seranking.com/api",
+    "docs_url": "https://seranking.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://seranking.com/api",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 53,
+    "name": "Ahrefs",
+    "category": "Data & SEO",
+    "website": "ahrefs.com/api",
+    "docs_url": "https://ahrefs.com/api",
+    "what_it_does": "Access Ahrefs marketing and search data through our APIs and developer tools to build custom integrations and workflows.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "REST",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://ahrefs.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 54,
+    "name": "MrScraper",
+    "category": "Data & SEO",
+    "website": "docs.mrscraper.com",
+    "docs_url": "https://docs.mrscraper.com",
+    "what_it_does": "Your all-in-one guide to understanding, configuring, and using our scraping platform.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.mrscraper.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 55,
+    "name": "Apify",
+    "category": "Data & SEO",
+    "website": "docs.apify.com",
+    "docs_url": "https://docs.apify.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.apify.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 56,
+    "name": "Firecrawl",
+    "category": "Data & SEO",
+    "website": "firecrawl.dev",
+    "docs_url": "https://docs.firecrawl.dev",
+    "what_it_does": "Search the web, scrape any page, and interact with it \u2014 all through one API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.firecrawl.dev",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 57,
+    "name": "Bright Data",
+    "category": "Data & SEO",
+    "website": "brightdata.com",
+    "docs_url": "https://docs.brightdata.com",
+    "what_it_does": "Bright Data&#x27;s web data platform: residential, mobile and ISP proxies, 700+ pre-built scrapers, a dataset marketplace and AI-ready APIs.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.brightdata.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "category": "Data & SEO",
+    "website": "github.com/sherlock-project/sherlock",
+    "docs_url": "https://github.com/sherlock-project/sherlock",
+    "what_it_does": "Hunt down social media accounts by username across social networks - sherlock-project/sherlock",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://github.com/sherlock-project/sherlock",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "Data & SEO",
+    "website": "waterfall.io",
+    "docs_url": "https://waterfall.io",
+    "what_it_does": "Waterfall | One B2B data solution to connect them all",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://waterfall.io",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 60,
+    "name": "Clay",
+    "category": "Data & SEO",
+    "website": "clay.com",
+    "docs_url": "https://www.clay.com",
+    "what_it_does": "Clay | Build systems to grow revenue",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://www.clay.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 61,
+    "name": "GitHub",
+    "category": "Developer & Infra",
+    "website": "docs.github.com/rest",
+    "docs_url": "https://docs.github.com/en/rest",
+    "what_it_does": "Create integrations, retrieve data, and automate your workflows with the GitHub REST API.",
+    "auth_methods": [
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.github.com/en/rest",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 62,
+    "name": "Vercel",
+    "category": "Developer & Infra",
+    "website": "vercel.com/docs/rest-api",
+    "docs_url": "https://vercel.com/docs/rest-api",
+    "what_it_does": "Interact programmatically with your Vercel account using the SDK or direct HTTP requests.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://vercel.com/docs/rest-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 63,
+    "name": "Netlify",
+    "category": "Developer & Infra",
+    "website": "docs.netlify.com/api",
+    "docs_url": "https://docs.netlify.com/api",
+    "what_it_does": "Use our REST API to interact with our platform. Learn the basics for using the API, instructions for deploying sites, and notes on commonly used endpoints.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://docs.netlify.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 64,
+    "name": "Cloudflare",
+    "category": "Developer & Infra",
+    "website": "developers.cloudflare.com/api",
+    "docs_url": "https://developers.cloudflare.com/api",
+    "what_it_does": "API Reference | Cloudflare API",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developers.cloudflare.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 65,
+    "name": "Supabase",
+    "category": "Developer & Infra",
+    "website": "supabase.com/docs",
+    "docs_url": "https://supabase.com/docs/guides/api",
+    "what_it_does": "Auto-generating data REST API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://supabase.com/docs/guides/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 66,
+    "name": "Neo4j",
+    "category": "Developer & Infra",
+    "website": "neo4j.com/docs/api",
+    "docs_url": "https://neo4j.com/docs/http-api",
+    "what_it_does": "The Neo4j HTTP API allows to execute a series of Cypher statements against a Neo4j server through HTTP requests.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://neo4j.com/docs/http-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 67,
+    "name": "Snowflake",
+    "category": "Developer & Infra",
+    "website": "docs.snowflake.com",
+    "docs_url": "https://docs.snowflake.com/en/developer-guide",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://docs.snowflake.com/en/developer-guide",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "category": "Developer & Infra",
+    "website": "mongodb.com/docs/atlas/api",
+    "docs_url": "https://www.mongodb.com/docs/atlas/api",
+    "what_it_does": "Use APIs and the Atlas CLI to programmatically access your deployments and apps.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "GraphQL"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.mongodb.com/docs/atlas/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 69,
+    "name": "Datadog",
+    "category": "Developer & Infra",
+    "website": "docs.datadoghq.com/api",
+    "docs_url": "https://docs.datadoghq.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://docs.datadoghq.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 70,
+    "name": "Sentry",
+    "category": "Developer & Infra",
+    "website": "docs.sentry.io/api",
+    "docs_url": "https://docs.sentry.io/api",
+    "what_it_does": "API Reference",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.sentry.io/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 71,
+    "name": "Notion",
+    "category": "Productivity & PM",
+    "website": "developers.notion.com",
+    "docs_url": "https://developers.notion.com",
+    "what_it_does": "Discover what Notion connections are, when to use each type, and what you can build.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.notion.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "category": "Productivity & PM",
+    "website": "airtable.com/developers",
+    "docs_url": "https://airtable.com/developers/web/api",
+    "what_it_does": "Airtable is a low-code platform for building collaborative apps. Customize your workflow, collaborate, and achieve ambitious outcomes. Get started for free.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://airtable.com/developers/web/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 73,
+    "name": "Linear",
+    "category": "Productivity & PM",
+    "website": "developers.linear.app",
+    "docs_url": "https://developers.linear.app/docs",
+    "what_it_does": "",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.linear.app/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 74,
+    "name": "Jira",
+    "category": "Productivity & PM",
+    "website": "developer.atlassian.com",
+    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3",
+    "what_it_does": "",
+    "auth_methods": [
+      "OAuth2",
+      "Basic Auth",
+      "JWT"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "category": "Productivity & PM",
+    "website": "developers.asana.com",
+    "docs_url": "https://developers.asana.com/docs",
+    "what_it_does": "Learn the basics of Asana's developer platform",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.asana.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 76,
+    "name": "Monday.com",
+    "category": "Productivity & PM",
+    "website": "developer.monday.com",
+    "docs_url": "https://developer.monday.com/api-reference/docs",
+    "what_it_does": "The monday GraphQL API allows developers to programmatically access and update data inside a monday.com account. It is part of the monday apps framework.",
+    "auth_methods": [
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.monday.com/api-reference/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "category": "Productivity & PM",
+    "website": "clickup.com/api",
+    "docs_url": "https://clickup.com/api",
+    "what_it_does": "ClickUp",
+    "auth_methods": [
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://clickup.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 78,
+    "name": "Coda",
+    "category": "Productivity & PM",
+    "website": "coda.io/developers",
+    "docs_url": "https://coda.io/developers/apis",
+    "what_it_does": "Coda&#x27;s REST API lets you extend Coda even further through programmatic access to your Coda docs.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://coda.io/developers/apis",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 79,
+    "name": "Smartsheet",
+    "category": "Productivity & PM",
+    "website": "smartsheet.com/developers",
+    "docs_url": "https://smartsheet.redoc.ly",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://smartsheet.redoc.ly",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 80,
+    "name": "Harvest",
+    "category": "Productivity & PM",
+    "website": "getharvest.com",
+    "docs_url": "https://help.getharvest.com/api-v2",
+    "what_it_does": "Support documentation for the Harvest API",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Gated",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://help.getharvest.com/api-v2",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 81,
+    "name": "Stripe",
+    "category": "Finance & Fintech",
+    "website": "stripe.com/docs/api",
+    "docs_url": "https://stripe.com/docs/api",
+    "what_it_does": "Stripe API Reference",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://stripe.com/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 82,
+    "name": "Plaid",
+    "category": "Finance & Fintech",
+    "website": "plaid.com/docs",
+    "docs_url": "https://plaid.com/docs/api",
+    "what_it_does": "Comprehensive reference for integrating with Plaid API endpoints",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://plaid.com/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 83,
+    "name": "Binance",
+    "category": "Finance & Fintech",
+    "website": "binance-docs.github.io",
+    "docs_url": "https://binance-docs.github.io/apidocs",
+    "what_it_does": "Redirecting to https://developers.binance.com/en",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://binance-docs.github.io/apidocs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "category": "Finance & Fintech",
+    "website": "paygent",
+    "docs_url": "https://developer.paygent.co.jp",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://developer.paygent.co.jp",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "category": "Finance & Fintech",
+    "website": "ipayx.ai/docs",
+    "docs_url": "https://ipayx.ai/docs",
+    "what_it_does": "FINTRAC-registered (MSB C10001283) FX forensic audit layer. One-click audit of bank or card-network rates vs live mid-market across 300+ currencies.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://ipayx.ai/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 86,
+    "name": "QuickBooks",
+    "category": "Finance & Fintech",
+    "website": "developer.intuit.com",
+    "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/api",
+    "what_it_does": "Intuit Developer",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.intuit.com/app/developer/qbo/docs/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 87,
+    "name": "Xero",
+    "category": "Finance & Fintech",
+    "website": "developer.xero.com",
+    "docs_url": "https://developer.xero.com/documentation/api",
+    "what_it_does": "Accounting API Overview \u2014 Xero Developer",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.xero.com/documentation/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 88,
+    "name": "Brex",
+    "category": "Finance & Fintech",
+    "website": "developer.brex.com",
+    "docs_url": "https://developer.brex.com",
+    "what_it_does": "Overview",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.brex.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 89,
+    "name": "Ramp",
+    "category": "Finance & Fintech",
+    "website": "docs.ramp.com",
+    "docs_url": "https://docs.ramp.com/developer-api",
+    "what_it_does": "Ramp API Documentation",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://docs.ramp.com/developer-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "category": "Finance & Fintech",
+    "website": "pitchbook.com",
+    "docs_url": "https://pitchbook.com",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://pitchbook.com",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "AI & Research",
+    "website": "cloud.google.com/gemini",
+    "docs_url": "https://cloud.google.com/gemini",
+    "what_it_does": "Compare the different ways you can build with Gemini models and use Gemini as your AI assistant at work.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://cloud.google.com/gemini",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "category": "AI & Research",
+    "website": "help.otter.ai",
+    "docs_url": "https://help.otter.ai",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://help.otter.ai",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 93,
+    "name": "Fathom",
+    "category": "AI & Research",
+    "website": "fathom.video",
+    "docs_url": "https://fathom.video",
+    "what_it_does": "Fathom AI Notetaker - Never Take Notes Again",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://fathom.video",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "category": "AI & Research",
+    "website": "consensus.app",
+    "docs_url": "https://consensus.app",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://consensus.app",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 95,
+    "name": "Reducto",
+    "category": "AI & Research",
+    "website": "reducto.ai",
+    "docs_url": "https://docs.reducto.ai",
+    "what_it_does": "The agentic document platform for leading AI teams",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.reducto.ai",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 96,
+    "name": "Devin",
+    "category": "AI & Research",
+    "website": "docs.devin.ai",
+    "docs_url": "https://docs.devin.ai",
+    "what_it_does": "Devin is the AI software engineer, built to help ambitious engineering teams crush their backlogs.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.devin.ai",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 97,
+    "name": "higgsfield",
+    "category": "AI & Research",
+    "website": "higgsfield.ai/cli",
+    "docs_url": "https://higgsfield.ai/cli",
+    "what_it_does": "Run Higgsfield from the command line in Claude Code, Cursor, or any MCP-compatible CLI agent. Generate images and videos across 30+ models without leaving your terminal.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://higgsfield.ai/cli",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "category": "AI & Research",
+    "website": "github.com/mermaid-js/mermaid-cli",
+    "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+    "what_it_does": "Command line tool for the Mermaid library. Contribute to mermaid-js/mermaid-cli development by creating an account on GitHub.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://github.com/mermaid-js/mermaid-cli",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "category": "AI & Research",
+    "website": "transcriptapi.com",
+    "docs_url": "https://transcriptapi.com",
+    "what_it_does": "100 free credits to start. YouTube transcript API with video search, channel browsing, and playlist extraction. REST API, YouTube MCP for ChatGPT &amp; Claude, and AI agent skills. Powers 15M+ transcr",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://transcriptapi.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 100,
+    "name": "Grain",
+    "category": "AI & Research",
+    "website": "grain.com",
+    "docs_url": "https://grain.com",
+    "what_it_does": "Grain | The AI Notetaker Built for Growing Teams",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://grain.com",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

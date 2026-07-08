@@ -1,0 +1,267 @@
+[
+  {
+    "id": 71,
+    "name": "Notion",
+    "category": "Productivity & PM",
+    "website": "developers.notion.com",
+    "docs_url": "https://developers.notion.com",
+    "what_it_does": "Discover what Notion connections are, when to use each type, and what you can build.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.notion.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "category": "Productivity & PM",
+    "website": "airtable.com/developers",
+    "docs_url": "https://airtable.com/developers/web/api",
+    "what_it_does": "Airtable is a low-code platform for building collaborative apps. Customize your workflow, collaborate, and achieve ambitious outcomes. Get started for free.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://airtable.com/developers/web/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 73,
+    "name": "Linear",
+    "category": "Productivity & PM",
+    "website": "developers.linear.app",
+    "docs_url": "https://developers.linear.app/docs",
+    "what_it_does": "",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.linear.app/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 74,
+    "name": "Jira",
+    "category": "Productivity & PM",
+    "website": "developer.atlassian.com",
+    "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3",
+    "what_it_does": "",
+    "auth_methods": [
+      "OAuth2",
+      "Basic Auth",
+      "JWT"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "category": "Productivity & PM",
+    "website": "developers.asana.com",
+    "docs_url": "https://developers.asana.com/docs",
+    "what_it_does": "Learn the basics of Asana's developer platform",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.asana.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 76,
+    "name": "Monday.com",
+    "category": "Productivity & PM",
+    "website": "developer.monday.com",
+    "docs_url": "https://developer.monday.com/api-reference/docs",
+    "what_it_does": "The monday GraphQL API allows developers to programmatically access and update data inside a monday.com account. It is part of the monday apps framework.",
+    "auth_methods": [
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developer.monday.com/api-reference/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "category": "Productivity & PM",
+    "website": "clickup.com/api",
+    "docs_url": "https://clickup.com/api",
+    "what_it_does": "ClickUp",
+    "auth_methods": [
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://clickup.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 78,
+    "name": "Coda",
+    "category": "Productivity & PM",
+    "website": "coda.io/developers",
+    "docs_url": "https://coda.io/developers/apis",
+    "what_it_does": "Coda&#x27;s REST API lets you extend Coda even further through programmatic access to your Coda docs.",
+    "auth_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "Webhooks"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://coda.io/developers/apis",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 79,
+    "name": "Smartsheet",
+    "category": "Productivity & PM",
+    "website": "smartsheet.com/developers",
+    "docs_url": "https://smartsheet.redoc.ly",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://smartsheet.redoc.ly",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 80,
+    "name": "Harvest",
+    "category": "Productivity & PM",
+    "website": "getharvest.com",
+    "docs_url": "https://help.getharvest.com/api-v2",
+    "what_it_does": "Support documentation for the Harvest API",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Gated",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://help.getharvest.com/api-v2",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

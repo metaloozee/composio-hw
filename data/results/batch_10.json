@@ -1,0 +1,258 @@
+[
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "AI & Research",
+    "website": "cloud.google.com/gemini",
+    "docs_url": "https://cloud.google.com/gemini",
+    "what_it_does": "Compare the different ways you can build with Gemini models and use Gemini as your AI assistant at work.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve (likely)",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://cloud.google.com/gemini",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "category": "AI & Research",
+    "website": "help.otter.ai",
+    "docs_url": "https://help.otter.ai",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://help.otter.ai",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 93,
+    "name": "Fathom",
+    "category": "AI & Research",
+    "website": "fathom.video",
+    "docs_url": "https://fathom.video",
+    "what_it_does": "Fathom AI Notetaker - Never Take Notes Again",
+    "auth_methods": [
+      "OAuth2"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://fathom.video",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "category": "AI & Research",
+    "website": "consensus.app",
+    "docs_url": "https://consensus.app",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://consensus.app",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 95,
+    "name": "Reducto",
+    "category": "AI & Research",
+    "website": "reducto.ai",
+    "docs_url": "https://docs.reducto.ai",
+    "what_it_does": "The agentic document platform for leading AI teams",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.reducto.ai",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 96,
+    "name": "Devin",
+    "category": "AI & Research",
+    "website": "docs.devin.ai",
+    "docs_url": "https://docs.devin.ai",
+    "what_it_does": "Devin is the AI software engineer, built to help ambitious engineering teams crush their backlogs.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "GraphQL",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.devin.ai",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 97,
+    "name": "higgsfield",
+    "category": "AI & Research",
+    "website": "higgsfield.ai/cli",
+    "docs_url": "https://higgsfield.ai/cli",
+    "what_it_does": "Run Higgsfield from the command line in Claude Code, Cursor, or any MCP-compatible CLI agent. Generate images and videos across 30+ models without leaving your terminal.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://higgsfield.ai/cli",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "category": "AI & Research",
+    "website": "github.com/mermaid-js/mermaid-cli",
+    "docs_url": "https://github.com/mermaid-js/mermaid-cli",
+    "what_it_does": "Command line tool for the Mermaid library. Contribute to mermaid-js/mermaid-cli development by creating an account on GitHub.",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://github.com/mermaid-js/mermaid-cli",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "category": "AI & Research",
+    "website": "transcriptapi.com",
+    "docs_url": "https://transcriptapi.com",
+    "what_it_does": "100 free credits to start. YouTube transcript API with video search, channel browsing, and playlist extraction. REST API, YouTube MCP for ChatGPT &amp; Claude, and AI agent skills. Powers 15M+ transcr",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://transcriptapi.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 100,
+    "name": "Grain",
+    "category": "AI & Research",
+    "website": "grain.com",
+    "docs_url": "https://grain.com",
+    "what_it_does": "Grain | The AI Notetaker Built for Growing Teams",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "MCP"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://grain.com",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]

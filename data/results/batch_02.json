@@ -1,0 +1,266 @@
+[
+  {
+    "id": 11,
+    "name": "Zendesk",
+    "category": "Support & Helpdesk",
+    "website": "zendesk.com",
+    "docs_url": "https://developer.zendesk.com/api-reference",
+    "what_it_does": "Developer documentation for products at Zendesk",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Moderate (20-50 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://developer.zendesk.com/api-reference",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 12,
+    "name": "Intercom",
+    "category": "Support & Helpdesk",
+    "website": "intercom.com",
+    "docs_url": "https://developers.intercom.com",
+    "what_it_does": "Intercom Developers | Intercom and Fin Developer Platform",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "MCP"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developers.intercom.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 13,
+    "name": "Freshdesk",
+    "category": "Support & Helpdesk",
+    "website": "freshdesk.com",
+    "docs_url": "https://developers.freshdesk.com/api",
+    "what_it_does": "Freshdesk",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Gated",
+    "api_surface": [
+      "REST",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Gated"
+    ],
+    "evidence_url": "https://developers.freshdesk.com/api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 14,
+    "name": "Front",
+    "category": "Support & Helpdesk",
+    "website": "front.com",
+    "docs_url": "https://dev.frontapp.com",
+    "what_it_does": "Welcome to the Front Platform \ud83d\udc4b Whether you\u2019re looking to build a custom integration just for your team or looking to publicly launch a Front integration, you\u2019re in the right place! Our documentation ",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://dev.frontapp.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "category": "Support & Helpdesk",
+    "website": "usepylon.com",
+    "docs_url": "https://docs.usepylon.com",
+    "what_it_does": "Introduction | Pylon",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown"
+    ],
+    "evidence_url": "https://docs.usepylon.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 16,
+    "name": "LiveAgent",
+    "category": "Support & Helpdesk",
+    "website": "liveagent.com",
+    "docs_url": "https://www.liveagent.com/api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://www.liveagent.com/api",
+    "fetch_success": false,
+    "fetch_error": "Failed to fetch"
+  },
+  {
+    "id": 17,
+    "name": "Plain",
+    "category": "Support & Helpdesk",
+    "website": "plain.com",
+    "docs_url": "https://www.plain.com/docs",
+    "what_it_does": "An overview of Plain&#x27;s GraphQL API.",
+    "auth_methods": [
+      "API Key"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (10-20 endpoints)",
+    "existing_mcp": true,
+    "buildability": "Blocked",
+    "blockers": [
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://www.plain.com/docs",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 18,
+    "name": "Help Scout",
+    "category": "Support & Helpdesk",
+    "website": "helpscout.com",
+    "docs_url": "https://developer.helpscout.com/mailbox-api",
+    "what_it_does": "",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "Unknown"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown",
+      "API surface unclear",
+      "No documented API"
+    ],
+    "evidence_url": "https://developer.helpscout.com/mailbox-api",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 19,
+    "name": "Gorgias",
+    "category": "Support & Helpdesk",
+    "website": "gorgias.com",
+    "docs_url": "https://developers.gorgias.com",
+    "what_it_does": "gorgias-developers",
+    "auth_methods": [
+      "OAuth2",
+      "API Key",
+      "JWT"
+    ],
+    "selfserve": "Self-serve",
+    "api_surface": [
+      "REST",
+      "GraphQL",
+      "MCP",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Broad (50+ endpoints)",
+    "existing_mcp": true,
+    "buildability": "Ready",
+    "blockers": [],
+    "evidence_url": "https://developers.gorgias.com",
+    "fetch_success": true,
+    "fetch_error": null
+  },
+  {
+    "id": 20,
+    "name": "Gladly",
+    "category": "Support & Helpdesk",
+    "website": "gladly.com",
+    "docs_url": "https://developer.gladly.com",
+    "what_it_does": "Main Home - Gladly Developer",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "selfserve": "Unknown",
+    "api_surface": [
+      "REST",
+      "Webhooks",
+      "SDK"
+    ],
+    "api_breadth": "Narrow (<10 endpoints)",
+    "existing_mcp": false,
+    "buildability": "Blocked",
+    "blockers": [
+      "Auth unknown",
+      "Access gate: Unknown"
+    ],
+    "evidence_url": "https://developer.gladly.com",
+    "fetch_success": true,
+    "fetch_error": null
+  }
+]
